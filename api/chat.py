@@ -31,6 +31,7 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
         prompt = chat_request.prompt
         file_id_input = chat_request.file_id
         file_url = None
+        last_response = None
 
         chat_ref = db.collection('chats').document(chat_session)
         chat_doc = chat_ref.get()
@@ -43,12 +44,15 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                 'status': 'active',
                 'messages': [],
                 'created_at': firestore.SERVER_TIMESTAMP,
-                'last_file_id': file_id_input if file_id_input else None
+                'last_file_id': file_id_input if file_id_input else None,
+                'last_response': None
             })
             last_file_id = file_id_input
         else:
             chat_data = chat_doc.to_dict()
+
             last_file_id = chat_data.get("last_file_id")
+            last_response = chat_data.get("last_response")
 
             if file_id_input and file_id_input != last_file_id:
                 chat_ref.update({'last_file_id': file_id_input})
@@ -89,6 +93,8 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                         Kamu adalah SPLASHBot yang mengkhususkan diri dalam ekonomi dan menganalisis PDF yang diberikan.\\n\n
                         Konten PDF: {relevant_text}\n\n
                         Pertanyaan dari user: {prompt}
+                        Apabila PDF yang diberikan bukan berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
+                        Bold lah kata kunci yang penting dalam jawaban.\n\n
                         """
                     ).text
 
@@ -97,9 +103,15 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
 
                     response = multimodal_model.generate_content(
                         [
-                            "Kamu adalah SPLASHBot yang mengkhususkan diri dalam ekonomi dan menganalisis gambar yang diberikan.",
+                            """
+                            Kamu adalah SPLASHBot yang mengkhususkan diri dalam ekonomi dan menganalisis gambar yang diberikan.
+                            """,
                             image,
-                            f"Pertanyaan dari user: {prompt}"
+                            f"""
+                            Pertanyaan dari user: {prompt}
+                            Apabila gambar yang diberikan bukan berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
+                            Bold lah kata kunci yang penting dalam jawaban.\n\n
+                            """
                         ]
                     ).text
                 else:
@@ -110,38 +122,50 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                     f"""
                         Kamu adalah SPLASHBot yang mengkhususkan diri dalam menjawab pertanyaan seputar ekonomi.\n\n
                         Pertanyaan dari user: {prompt}
+                        Selain pertanyaan yang berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
+                        Bold lah kata kunci yang penting dalam jawaban.\n\n
                     """
                 ).text
 
         elif chat_request.chat_options == "2 Wheels":
             response = two_wheels_model(prompt)
             file_id_input = None  
+            last_response = None
         
         elif chat_request.chat_options == "4 Wheels":
             response = four_wheels_model(prompt)
-            file_id_input = None  
+            file_id_input = None 
+            last_response = None 
         
         elif chat_request.chat_options == "Retail General":
             response = retail_general_model(prompt)
             file_id_input = None  
+            last_response = None
 
         elif chat_request.chat_options == "Retail Beauty":
             response = retail_beauty_model(prompt)
             file_id_input = None  
+            last_response = None
 
         elif chat_request.chat_options == "Retail FnB":
             response = retail_fnb_model(prompt)
             file_id_input = None  
+            last_response = None
 
         elif chat_request.chat_options == "Retail Drugstore":
             response = retail_drugstore_model(prompt)
             file_id_input = None  
+            last_response = None
 
         chat_ref.update({
             'messages': firestore.ArrayUnion([
                 {
                     'role': 'user',
-                    'content': prompt,
+                    'content': f"""
+                        ## Ini adalah Last Response dari Percakapan Sebelumnya: {last_response}
+                        \n\n
+                        ## Pertanyaan Saat Ini: {prompt}
+                        """,
                     'file_id': file_id_input,
                     'created_at': now
                 },
@@ -150,7 +174,8 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                     'content': response,
                     'created_at': now
                 }
-            ])
+            ]),
+            'last_response': response  
         })
 
         return {
