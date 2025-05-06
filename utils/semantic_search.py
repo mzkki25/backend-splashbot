@@ -39,6 +39,7 @@ def extract_pdf_image_from_blob(file_content) -> str:
 
 def find_relevant_chunks(text: str, query: str, chunk_size: int = 500, top_k: int = 3) -> str:
     chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+    
     chunk_embeddings = sentence_model.encode(chunks)
     query_embedding = sentence_model.encode(query)
 

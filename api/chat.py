@@ -18,6 +18,7 @@ from api.deps import get_current_user
 from PIL import Image
 from firebase_admin import firestore
 from datetime import datetime
+from utils.search_web import search_web_snippets
 
 import io
 
@@ -30,8 +31,10 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
         user_id = user['uid']
         prompt = chat_request.prompt
         file_id_input = chat_request.file_id
+
         file_url = None
         last_response = None
+        references = None
 
         chat_ref = db.collection('chats').document(chat_session)
         chat_doc = chat_ref.get()
@@ -48,6 +51,7 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                 'last_response': None
             })
             last_file_id = file_id_input
+
         else:
             chat_data = chat_doc.to_dict()
 
@@ -93,6 +97,7 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                         Kamu adalah SPLASHBot yang mengkhususkan diri dalam ekonomi dan menganalisis PDF yang diberikan.\\n\n
                         Konten PDF: {relevant_text}\n\n
                         Pertanyaan dari user: {prompt}
+                        Ini adalah last response dari percakapan sebelumnya: {last_response}\n\n
                         Apabila PDF yang diberikan bukan berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
                         Bold lah kata kunci yang penting dalam jawaban.\n\n
                         """
@@ -109,6 +114,7 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                             image,
                             f"""
                             Pertanyaan dari user: {prompt}
+                            Ini adalah last response dari percakapan sebelumnya: {last_response}\n\n
                             Apabila gambar yang diberikan bukan berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
                             Bold lah kata kunci yang penting dalam jawaban.\n\n
                             """
@@ -121,67 +127,63 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                 response = model.generate_content(
                     f"""
                         Kamu adalah SPLASHBot yang mengkhususkan diri dalam menjawab pertanyaan seputar ekonomi.\n\n
+                        Ini adalah last response dari percakapan sebelumnya: {last_response}\n\n
                         Pertanyaan dari user: {prompt}
                         Selain pertanyaan yang berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
                         Bold lah kata kunci yang penting dalam jawaban.\n\n
                     """
                 ).text
 
+                references = search_web_snippets(response, num_results=5)
+
         elif chat_request.chat_options == "2 Wheels":
             response = two_wheels_model(prompt)
             file_id_input = None  
-            last_response = None
         
         elif chat_request.chat_options == "4 Wheels":
             response = four_wheels_model(prompt)
             file_id_input = None 
-            last_response = None 
         
         elif chat_request.chat_options == "Retail General":
             response = retail_general_model(prompt)
             file_id_input = None  
-            last_response = None
 
         elif chat_request.chat_options == "Retail Beauty":
             response = retail_beauty_model(prompt)
             file_id_input = None  
-            last_response = None
 
         elif chat_request.chat_options == "Retail FnB":
             response = retail_fnb_model(prompt)
             file_id_input = None  
-            last_response = None
 
         elif chat_request.chat_options == "Retail Drugstore":
             response = retail_drugstore_model(prompt)
             file_id_input = None  
-            last_response = None
 
         chat_ref.update({
             'messages': firestore.ArrayUnion([
                 {
                     'role': 'user',
-                    'content': f"""
-                        ## Ini adalah Last Response dari Percakapan Sebelumnya: {last_response}
-                        \n\n
-                        ## Pertanyaan Saat Ini: {prompt}
-                        """,
+                    'content': prompt,
                     'file_id': file_id_input,
                     'created_at': now
                 },
                 {
                     'role': 'assistant',
                     'content': response,
-                    'created_at': now
+                    'created_at': now,
+                    'references': references, # this will be a list of links 
                 }
             ]),
             'last_response': response  
         })
 
-        return {
+        return JSONResponse(content={
             "response": response,
-            "file_url": file_url
-        }
+            "file_url": file_url,
+            "created_at": now.isoformat(),
+            "references": references,
+        }, status_code=200)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
