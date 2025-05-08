@@ -1,10 +1,10 @@
-# from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 import pdfplumber
 import io
 
-# sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
+from sentence_transformers import SentenceTransformer
+sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def cleaning_text(text: str) -> str:
     text = text.replace("\n", " ").replace("\r", " ").strip()
@@ -40,12 +40,12 @@ def extract_pdf_image_from_blob(file_content) -> str:
 def find_relevant_chunks(text: str, query: str, chunk_size: int = 500, top_k: int = 3) -> str:
     chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
     
-    # chunk_embeddings = sentence_model.encode(chunks)
-    # query_embedding = sentence_model.encode(query)
+    chunk_embeddings = sentence_model.encode(chunks)
+    query_embedding = sentence_model.encode(query)
 
-    # similarities = cosine_similarity([query_embedding], chunk_embeddings)[0]
-    # top_indices = similarities.argsort()[-top_k:][::-1]
+    similarities = cosine_similarity([query_embedding], chunk_embeddings)[0]
+    top_indices = similarities.argsort()[-top_k:][::-1]
 
-    # relevant_text = " ".join([chunks[i] for i in top_indices])
-    relevant_text = " ".join(chunks[:top_k])  # Placeholder for actual similarity logic
+    relevant_text = " ".join([chunks[i] for i in top_indices])
+    # relevant_text = " ".join(chunks[:top_k])  # Placeholder for actual similarity logic
     return relevant_text

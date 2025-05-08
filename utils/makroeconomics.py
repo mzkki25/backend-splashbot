@@ -35,6 +35,7 @@ def two_wheels_model(text):
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
+        print(response)
 
         local_ns = {'df': df}
         exec(response, {}, local_ns)
@@ -81,29 +82,18 @@ def two_wheels_model(text):
     except Exception as e:
         fallback_response = model.generate_content(
             contents=f"""
-                Kamu adalah SPLASHBot, AI yang bertugas membantu pengguna memahami data ekonomi.
+                Kamu tidak dapat memberikan jawaban spesifik dari:
 
-                Dalam kasus ini, kamu **tidak dapat memberikan jawaban spesifik** terhadap pertanyaan berikut:
+                Pertanyaan: "{text}"
+                Kolom DataFrame: {df.columns.tolist()}
+                Nama Kota yang ada di DataFrame: {df['kab'].unique().tolist()}
+                Nama Provinsi yang ada di DataFrame: {df['prov'].unique().tolist()}
 
-                - **Pertanyaan**: "{text}"
-
-                Namun, kamu diberikan informasi umum dari DataFrame berikut:
-                - **Kolom DataFrame**: {df.columns.tolist()}
-                - **Nama Kota (`kab`)**: {df['kab'].unique().tolist()}
-                - **Nama Provinsi (`prov`)**: {df['prov'].unique().tolist()}
-
-                ### Tugasmu:
-                Berikan **penjelasan umum** dan **bermanfaat** mengenai struktur dan isi data tersebut. Fokuskan pada:
-                - Apa saja **jenis data** yang tersedia
-                - **Potensi analisis** atau insight yang bisa diperoleh dari data ini secara umum
-                - Penjelasan singkat mengenai **peran setiap kolom**
-                - Jangan memberikan jawaban terhadap pertanyaan spesifik, karena data yang tersedia tidak mendukung
-
-                Gunakan gaya bahasa yang **informatif namun tetap ringkas**. Soroti istilah atau bagian penting dengan **bold** untuk memperjelas informasi.
+                Namun, kamu bisa memberikan penjelasan umum tentang data tersebut.
             """
         ).text.replace("```python", "").replace("```", "").strip()
 
-        return f"### Jawaban SPLASHBot:\n{fallback_response}"
+        return f"### SPLASHBot Tidak Dapat Menjawab:\n{fallback_response}"
     
 def four_wheels_model(text):
     answer = "Four wheels model masih dalam tahap pengembangan dan belum tersedia untuk digunakan. Silakan coba lagi nanti."
