@@ -47,5 +47,5 @@ def find_relevant_chunks(text: str, query: str, chunk_size: int = 500, top_k: in
     top_indices = similarities.argsort()[-top_k:][::-1]
 
     relevant_text = " ".join([chunks[i] for i in top_indices])
-    # relevant_text = " ".join(chunks[:top_k])  # Placeholder for actual similarity logic
+    # relevant_text = " ".join(chunks[:top_k])  
     return relevant_text
