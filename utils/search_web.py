@@ -3,14 +3,14 @@ import random
 
 from core.config import GCS_API_KEY, GCS_CX
 
-def search_web_snippets(llm_response, num_results=5):
+def search_web_snippets(llm_response, num_results=7):
     try:
         url = "https://www.googleapis.com/customsearch/v1"
         params = {
             "key": GCS_API_KEY,
             "cx": GCS_CX,
             "q": llm_response,
-            "num": num_results,
+            "num": random.randint(4, num_results),
         }
         
         response = requests.get(url, params=params).json()
@@ -22,14 +22,23 @@ def search_web_snippets(llm_response, num_results=5):
             snippet = item.get("snippet", "")
 
             results.append({
-                "title" : title, 
-                "link"  : link, 
-                "snippet"   : snippet
+                "title": title, 
+                "link": link, 
+                "snippet": snippet
             })
+        
+        linked_results = []
+        snippet_results = []
 
-        num_to_return = random.randint(1, min(5, len(results)))
-        link_result = [link['link'] for link in random.sample(results, num_to_return)]
-        return link_result
+        for linked_result in results:
+            linked_results.append(linked_result["link"])
+            snippet_results.append(linked_result["snippet"])
+
+        return {
+            "linked_results": linked_results,
+            "snippet_results": "\n".join(snippet_results),
+        }
     
     except Exception as e:
+        print(f"Error fetching search results: {e}")
         return []

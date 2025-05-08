@@ -25,8 +25,7 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
         messages = chat_data.get('messages', [])
 
         messages_sorted = sorted(
-            messages,
-            key=lambda x: x.get('created_at', 0) 
+            messages, key=lambda x: x.get('created_at', 0) 
         )
 
         results = []
@@ -40,12 +39,16 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
             else:
                 timestamp_str = None
 
-            results.append(ChatMessage(
-                role=msg.get('role', ''),
-                content=msg.get('content', ''),
-                file_id=msg.get('file_id'),
-                timestamp=timestamp_str
-            ))
+            results.append(
+                ChatMessage(
+                    message_id=msg.get('message_id', ''),
+                    chat_session_id=chat_session,
+                    role=msg.get('role', ''),
+                    content=msg.get('content', ''),
+                    file_id=msg.get('file_id'),
+                    timestamp=timestamp_str,
+                    references=msg.get('references', [])
+                ))
 
         return results
 

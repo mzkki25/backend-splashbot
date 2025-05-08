@@ -6,26 +6,32 @@ def two_wheels_model(text):
 
     try:
         prompt = f"""
-            Kamu adalah asisten data analyst. Tugasmu adalah membuat blok kode Python (bisa lebih dari satu baris, menggunakan pandas dan scikit-learn) 
-            untuk menjawab pertanyaan berikut dari DataFrame bernama `df`.
+            Kamu adalah **SPLASHBot**, sebuah AI Agent yang bertugas membuat **blok kode Python** untuk menjawab pertanyaan berbasis data menggunakan **pandas** dan **scikit-learn**.
 
-            Kolom DataFrame: {df.columns.tolist()}
-            Nama Kota yang ada di DataFrame: {df['kab'].unique().tolist()}
-            Nama Provinsi yang ada di DataFrame: {df['prov'].unique().tolist()}
-            Distribusi Tahun yang ada di DataFrame: {df['year'].unique().tolist()}
-            Distribusi Cluster yang ada di DataFrame: {df['cluster'].unique().tolist()}
+            ### Data yang Disediakan:
+            - Nama DataFrame: `df`
+            - Kolom: {df.columns.tolist()}
+            - Kota (`kab`): {df['kab'].unique().tolist()}
+            - Provinsi (`prov`): {df['prov'].unique().tolist()}
+            - Tahun (`year`): {df['year'].unique().tolist()}
+            - Cluster (`cluster`): {df['cluster'].unique().tolist()}
+            - Target variabel (penjualan): `delta_jumlah_sepeda_motor_kabkota` (dalam satuan unit)
 
-            Diketahui data penjualan (data target) adalah `delta_jumlah_sepeda_motor_kabkota` dalam satuan unit.
-            Sebagai tambahan, nilai kategorikal hanya ada di kolom `prov`, dan `kab`, selain kolom tersebut merupakan data numerik.
-            Kolom cluster adalah nilai numerikal yang dihasilkan dari clustering dengan menggunakan KMeans.
+            ### Informasi Penting:
+            - Nilai kategorikal hanya terdapat pada kolom `prov` dan `kab`
+            - Semua kolom lainnya adalah numerik
+            - Kolom `cluster` adalah hasil KMeans (numerik)
+            - Jika ada nilai NaN, isi menggunakan `fillna(0)`
+            - Jika hasil akhir **bukan DataFrame**, ubah ke bentuk DataFrame
+            - Hasil akhir harus disimpan ke dalam variabel bernama **`final_answer`**
+            - Batasi hasil akhir: maksimal **5 kolom** dan **10 baris**
+            - **Tidak perlu menambahkan penjelasan apapun**—**hanya blok kode Python**
 
-            Pertanyaan: "{text}"
+            ### Pertanyaan dari Pengguna:
+            **"{text}"**
 
-            PENTING:
-            Pastikan jawabanmu adalah **blok kode Python tanpa penjelasan tambahan**.
-            Jika ada nilai nan pada DataFrame, gunakan metode `fillna()` untuk mengisi nilai tersebut dengan 0.
-            Jika hasil akhir bukan merupakan DataFrame, maka tampilkan hasil akhir tersebut dalam bentuk DataFrame.
-            Hasil akhirnya **disimpan dalam variabel bernama `final_answer`** agar bisa dievaluasi setelahnya dengan maksimal 5 kolom dan maksimal 10 baris data. 
+            ### Tugas Anda:
+            Buat dan tampilkan **blok kode Python** untuk menjawab pertanyaan tersebut, sesuai instruksi di atas.
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
@@ -35,13 +41,26 @@ def two_wheels_model(text):
         answer_the_code = local_ns.get('final_answer').head(10) if 'final_answer' in local_ns else None
 
         prompt_2 = f"""
-            Pertanyaan dari user adalah "{text}".
-            Kode yang dihasilkan adalah:\n\n{response}
+            ### Konteks:
+            Pengguna mengajukan pertanyaan berikut:  
+            **"{text}"**
 
-            Diketahui bahwa hasil jawaban aktualnya adalah {answer_the_code}.
-            Analisislah diikuti dengan data dari jawaban aktualnya tanpa perlu menjelaskan algoritmanya sama sekali, fokus pada sisi bisnis saja. 
-            Jawaban berupa kesimpulan dari hasil analisis berbentuk poin by poin.
-            Bagian yang penting dapat di bold kan.
+            Model menghasilkan kode sebagai respons:  
+            {response}
+
+            Setelah kode dijalankan, diperoleh hasil output aktual sebagai berikut:  
+            {answer_the_code}
+
+            ### Tugas Anda:
+            Lakukan **analisis terhadap hasil aktual tersebut** dengan **fokus pada sisi bisnis** (bukan teknis atau algoritmik).  
+            **Jangan menjelaskan logika atau algoritma kode**. Soroti **implikasi bisnis, insight, dan dampak nyata** dari hasil tersebut.
+
+            ### Format Jawaban:
+            - Berikan jawaban dalam bentuk **poin-poin ringkas dan padat**.
+            - Soroti hal-hal yang **penting dengan cetak tebal (bold)**.
+            - Fokus pada **kesimpulan dan dampak bisnis** dari hasil tersebut.
+
+            Jika hasil aktual tidak mengandung informasi bermakna secara bisnis, sampaikan hal itu secara ringkas dan profesional.
         """
         explanation = model.generate_content(contents=prompt_2).text.replace("```python", "").replace("```", "").strip()
 
@@ -62,14 +81,25 @@ def two_wheels_model(text):
     except Exception as e:
         fallback_response = model.generate_content(
             contents=f"""
-                Kamu tidak dapat memberikan jawaban spesifik dari:
+                Kamu adalah SPLASHBot, AI yang bertugas membantu pengguna memahami data ekonomi.
 
-                Pertanyaan: "{text}"
-                Kolom DataFrame: {df.columns.tolist()}
-                Nama Kota yang ada di DataFrame: {df['kab'].unique().tolist()}
-                Nama Provinsi yang ada di DataFrame: {df['prov'].unique().tolist()}
+                Dalam kasus ini, kamu **tidak dapat memberikan jawaban spesifik** terhadap pertanyaan berikut:
 
-                Namun, kamu bisa memberikan penjelasan umum tentang data tersebut.
+                - **Pertanyaan**: "{text}"
+
+                Namun, kamu diberikan informasi umum dari DataFrame berikut:
+                - **Kolom DataFrame**: {df.columns.tolist()}
+                - **Nama Kota (`kab`)**: {df['kab'].unique().tolist()}
+                - **Nama Provinsi (`prov`)**: {df['prov'].unique().tolist()}
+
+                ### Tugasmu:
+                Berikan **penjelasan umum** dan **bermanfaat** mengenai struktur dan isi data tersebut. Fokuskan pada:
+                - Apa saja **jenis data** yang tersedia
+                - **Potensi analisis** atau insight yang bisa diperoleh dari data ini secara umum
+                - Penjelasan singkat mengenai **peran setiap kolom**
+                - Jangan memberikan jawaban terhadap pertanyaan spesifik, karena data yang tersedia tidak mendukung
+
+                Gunakan gaya bahasa yang **informatif namun tetap ringkas**. Soroti istilah atau bagian penting dengan **bold** untuk memperjelas informasi.
             """
         ).text.replace("```python", "").replace("```", "").strip()
 

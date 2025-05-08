@@ -28,12 +28,15 @@ class ChatResponse(BaseModel):
     file_url: Optional[str] = None
 
 class ChatHistory(BaseModel):
-    id: str
+    chat_session_id: str
     title: str
     timestamp: str
 
 class ChatMessage(BaseModel):
+    message_id: str
+    chat_session_id: str
     role: str  
     content: str
     file_id: Optional[str] = None
-    timestamp: Optional[str] = None  
+    timestamp: Optional[str] = None
+    references: Optional[List[str]] = None  

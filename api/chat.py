@@ -124,17 +124,35 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
                     raise HTTPException(status_code=400, detail="Unsupported file type")
 
             else:
+                result = search_web_snippets(prompt, num_results=5)
+                references = result.get("linked_results", [])
+                snippets = result.get("snippet_results", "")
+
                 response = model.generate_content(
                     f"""
-                        Kamu adalah SPLASHBot yang mengkhususkan diri dalam menjawab pertanyaan seputar ekonomi.\n\n
-                        Ini adalah last response dari percakapan sebelumnya: {last_response}\n\n
-                        Pertanyaan dari user: {prompt}
-                        Selain pertanyaan yang berkaitan dengan ekonomi, mohon untuk tidak menjawab.\n\n
-                        Bold lah kata kunci yang penting dalam jawaban.\n\n
+                    Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **ekonomi**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter, perdagangan, keuangan, dan indikator ekonomi.
+
+                    ### Konteks Sebelumnya:
+                    {last_response}
+
+                    ### Pertanyaan dari Pengguna:
+                    {prompt}
+
+                    ### Informasi Terkini dari Internet:
+                    {snippets}
+
+                    ### Catatan Penting:
+                    - Hanya gunakan **informasi dari internet** jika **relevan dengan topik ekonomi**.
+                    - **Abaikan** informasi yang tidak berkaitan dengan ekonomi.
+                    - **Jangan menyebutkan atau mengutip link** dari internet secara eksplisit dalam jawaban.
+                    - **Fokuskan jawaban** hanya pada topik **ekonomi**.
+                    - Gunakan penekanan (**bold**) pada **kata kunci penting** dalam jawaban agar lebih jelas bagi pengguna.
+
+                    ### Tugasmu:
+                    Berikan jawaban yang **jelas**, **relevan**, dan **berbasis ekonomi** terhadap pertanyaan pengguna. Jika pertanyaannya **tidak berkaitan dengan ekonomi**, cukup balas dengan:  
+                    _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_  
                     """
                 ).text
-
-                references = search_web_snippets(response, num_results=5)
 
         elif chat_request.chat_options == "2 Wheels":
             response = two_wheels_model(prompt)
@@ -160,15 +178,20 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user = Depe
             response = retail_drugstore_model(prompt)
             file_id_input = None  
 
+        import uuid
         chat_ref.update({
             'messages': firestore.ArrayUnion([
                 {
+                    'message_id': f"user-{str(uuid.uuid4())}",
+                    'chat_session_id': chat_session,
                     'role': 'user',
                     'content': prompt,
                     'file_id': file_id_input,
                     'created_at': now
                 },
                 {
+                    'message_id': f"assistant-{str(uuid.uuid4())}",
+                    'chat_session_id': chat_session,
                     'role': 'assistant',
                     'content': response,
                     'created_at': now,

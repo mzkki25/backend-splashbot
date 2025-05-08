@@ -17,11 +17,12 @@ async def get_chat_history(user = Depends(get_current_user)):
         history = []
         for chat in chats:
             chat_data = chat.to_dict()
-            history.append(ChatHistory(
-                id=chat.id,
-                title=chat_data['title'],
-                timestamp=chat_data['created_at'].isoformat() if chat_data['created_at'] else ""
-            ))
+            history.append(
+                ChatHistory(
+                    chat_session_id=chat.id,
+                    title=chat_data['title'],
+                    timestamp=chat_data['created_at'].isoformat() if chat_data['created_at'] else ""
+                ))
 
         return history
     except Exception as e:
