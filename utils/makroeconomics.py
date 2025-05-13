@@ -2,20 +2,22 @@ import pandas as pd
 from core.gemini import model
 
 def two_wheels_model(text):
-    df = pd.read_csv('dataset/2w_dataset.csv')
+    df = pd.read_csv('dataset/fix_2w.csv')
 
     try:
         prompt = f"""
-            Kamu adalah **SPLASHBot**, sebuah AI Agent yang bertugas membuat **blok kode Python** untuk menjawab pertanyaan berbasis data menggunakan **pandas** dan **scikit-learn**.
+            Kamu adalah **SPLASHBot**, sebuah AI Agent yang bertugas membuat **blok kode Python** untuk menjawab pertanyaan berbasis data 2 wheels menggunakan **pandas**.
 
-            ### Data yang Disediakan:
-            - Nama DataFrame: `df`
+            df = pd.read_csv('dataset/fix_2w.csv')
+            Nama DataFrame: `df` (Data ini sudah di definisikan sebelumnya, kamu hanya perlu menggunakannya).
+
+            ### Data yang Disediakan (Kolom Kategorikal):
             - Kolom: {df.columns.tolist()}
             - Kota (`kab`): {df['kab'].unique().tolist()}
             - Provinsi (`prov`): {df['prov'].unique().tolist()}
             - Tahun (`year`): {df['year'].unique().tolist()}
-            - Cluster (`cluster`): {df['cluster'].unique().tolist()}
-            - Target variabel (penjualan): `delta_jumlah_sepeda_motor_kabkota` (dalam satuan unit)
+            - Target variabel (penjualan): `penjualan` (dalam satuan unit)
+            - Target prediksi: `prediksi` (dalam satuan unit)
 
             ### Informasi Penting:
             - Nilai kategorikal hanya terdapat pada kolom `prov` dan `kab`
@@ -24,7 +26,6 @@ def two_wheels_model(text):
             - Jika ada nilai NaN, isi menggunakan `fillna(0)`
             - Jika hasil akhir **bukan DataFrame**, ubah ke bentuk DataFrame
             - Hasil akhir harus disimpan ke dalam variabel bernama **`final_answer`**
-            - Batasi hasil akhir: maksimal **5 kolom** dan **10 baris**
             - **Tidak perlu menambahkan penjelasan apapun**—**hanya blok kode Python**
 
             ### Pertanyaan dari Pengguna:
@@ -35,7 +36,6 @@ def two_wheels_model(text):
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
-        print(response)
 
         local_ns = {'df': df}
         exec(response, {}, local_ns)
@@ -43,8 +43,6 @@ def two_wheels_model(text):
 
         prompt_2 = f"""
             ### Konteks:
-            Pengguna mengajukan pertanyaan berikut:  
-            **"{text}"**
 
             Model menghasilkan kode sebagai respons:  
             {response}
@@ -52,14 +50,18 @@ def two_wheels_model(text):
             Setelah kode dijalankan, diperoleh hasil output aktual sebagai berikut:  
             {answer_the_code}
 
+            Pengguna mengajukan pertanyaan berikut:  
+            **"{text}"**
+
             ### Tugas Anda:
-            Lakukan **analisis terhadap hasil aktual tersebut** dengan **fokus pada sisi bisnis** (bukan teknis atau algoritmik).  
-            **Jangan menjelaskan logika atau algoritma kode**. Soroti **implikasi bisnis, insight, dan dampak nyata** dari hasil tersebut.
+            - Lakukan **analisis terhadap hasil aktual tersebut** dengan **fokus pada sisi bisnis** (bukan teknis atau algoritmik).  
+            - **Jangan menjelaskan logika atau algoritma kode**. Soroti **implikasi bisnis, insight, dan dampak nyata** dari hasil tersebut.
 
             ### Format Jawaban:
             - Berikan jawaban dalam bentuk **poin-poin ringkas dan padat**.
             - Soroti hal-hal yang **penting dengan cetak tebal (bold)**.
             - Fokus pada **kesimpulan dan dampak bisnis** dari hasil tersebut.
+            - Berikan **saran atau rekomendasi** jika relevan.
 
             Jika hasil aktual tidak mengandung informasi bermakna secara bisnis, sampaikan hal itu secara ringkas dan profesional.
         """

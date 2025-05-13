@@ -1,111 +1,100 @@
-# from fastapi import FastAPI
-# from pydantic import BaseModel
-# from core.gemini import model
+from core.gemini import model
+import numpy as np
+import pandas as pd
 
-# import requests
-# import re
-# import random
+def recommend_follow_up_questions_gm(prompt, response, file_id_input=None):
+    if file_id_input:
+        return []
+    else:
+        prompt = f"""
+            Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **ekonomi**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter, perdagangan, keuangan, dan indikator ekonomi.
 
-# app = FastAPI()
+            Diberikan sebuah pertanyaan awal dari pengguna berikut:
 
-# class QuestionRequest(BaseModel):
-#     question: str
+            "{prompt}"
 
-# class FollowUpRequest(BaseModel):
-#     question: str
-#     answer: str
+            dan jawaban yang sudah diberikan oleh sistem:
 
-# class InitialQuestionsResponse(BaseModel):
-#     questions: list[str]
+            "{response}"
 
-# @app.post("/ask")
-# async def ask_question(request: QuestionRequest):
-#     question = request.question
-#     snippets = search_web_snippets(question)
-#     answer = generate_answer_with_context(question, snippets)
-#     journals = search_web_snippets(question, 3)
-#     return {
-#         "answer": answer,
-#         "journals": [{
-#             "title" : j.splitlines()[0], 
-#             "link"  : j.splitlines()[1], 
-#             "description"   : j.splitlines()[2]
-#         } for j in journals]
-#     }
+            Buatlah hingga 5 pertanyaan lanjutan yang singkat, relevan, profesional, dan bersifat eksploratif yang berkaitan dengan **ekonomi** untuk membantu pengguna memahami topik ini lebih lanjut. 
+            Berikan hasil dalam format list Python (satu pertanyaan per elemen).
+            Contoh format:
+            [
+                "Pertanyaan lanjutan 1?",
+                "Pertanyaan lanjutan 2?",
+                ...
+            ]
+        """.strip()
 
-# @app.post("/follow_up")
-# async def follow_up_questions(request: FollowUpRequest):
-#     follow_up = recommend_follow_up_questions(request.question, request.answer)
-#     return {"follow_up": follow_up}
+        response = eval(model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip())
 
-# @app.get("/initial_questions", response_model=InitialQuestionsResponse)
-# async def initial_questions():
-#     questions = recommend_initial_questions()
-#     return {"questions": questions}
+        num_questions = np.random.randint(1, 6)
 
-# def search_web_snippets(query, num_results=5):
-#     url = "https://www.googleapis.com/customsearch/v1"
-#     params = {
-#         "key": GCS_API_KEY,
-#         "cx": GCS_CX,
-#         "q": query,
-#         "num": num_results,
-#     }
+        if len(response) > num_questions:
+            response = np.random.choice(response, num_questions, replace=False).tolist()
+
+        return response
     
-#     response = requests.get(url, params=params).json()
-#     results = []
+def recommend_follow_up_questions_ngm(prompt, response, chat_option):
+    if chat_option == "2 Wheels":
+        try:
+            df = pd.read_csv('dataset/fix_2w.csv')
+
+            prompt = f"""
+                Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **ekonomi**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter, perdagangan, keuangan, dan indikator ekonomi.
+
+                ### Diketahui Data yang Disediakan (Kolom Kategorikal):
+                - Kolom: {df.columns.tolist()} 
+
+                - Kota (`kab`): {df['kab'].unique().tolist()}
+                - Provinsi (`prov`): {df['prov'].unique().tolist()}
+                - Tahun (`year`): {df['year'].unique().tolist()}
+                - Target variabel (penjualan): `penjualan` (dalam satuan unit)
+                - Target prediksi: `prediksi` (dalam satuan unit)
+
+                Data diatas adalah data penjualan sepeda motor di Indonesia. Data ini berisi informasi tentang penjualan sepeda motor berdasarkan tahun, provinsi, dan kabupaten/kota.
+
+                Diberikan sebuah pertanyaan awal dari pengguna berikut:
+
+                "{prompt}"
+
+                dan jawaban yang sudah diberikan oleh sistem:
+
+                "{response}"
+
+                ### Tugasmu adalah: 
+                - Buatlah hingga 5 pertanyaan lanjutan yang singkat, relevan, profesional, dan bersifat eksploratif untuk membantu pengguna memahami topik ini lebih lanjut
+                - Pertanyaan lanjutan harus **berkaitan dengan data yang tersedia**. 
+                - Berikan hasil dalam format list Python (satu pertanyaan per elemen).
+
+                Contoh format:
+                [
+                    "Pertanyaan lanjutan 1?",
+                    "Pertanyaan lanjutan 2?",
+                    ...
+                ]
+            """.strip()
+
+            response = eval(model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip())
+            num_questions = np.random.randint(1, 6)
+
+            if len(response) > num_questions:
+                response = np.random.choice(response, num_questions, replace=False).tolist()
+
+            return response
+        
+        except Exception as e:
+            print(f"Error generating follow-up questions: {e}")
+            return []
     
-#     for item in response.get("items", []):
-#         title   = item.get("title", "No Title")
-#         link    = item.get("link", "")
-#         snippet = item.get("snippet", "")
-#         results.append(f"{title}\n{link}\n{snippet}")
-
-#     num_to_return = random.randint(1, min(5, len(results)))
-#     return random.sample(results, num_to_return)
-
-# def generate_answer_with_context(question, context_snippets):
-#     context = "\n".join(context_snippets)
-#     prompt = f"""
-#     Kamu adalah analis ekonomi. Berdasarkan informasi berikut dari internet, jawab pertanyaan ini secara ringkas dan akurat.
-
-#     === Informasi dari internet ===
-#     {context}
-
-#     === Pertanyaan ===
-#     {question}
-
-#     Jawab dengan gaya profesional.
-#     """
-#     response = model.generate_content(prompt)
-#     return response.text.strip()
-
-# def recommend_follow_up_questions(question, answer):
-#     prompt = f"""
-#     Berdasarkan pertanyaan berikut:
-
-#     "{question}"
-
-#     dan jawaban ini:
-
-#     "{answer}"
-
-#     Buat 3 pertanyaan lanjutan yang relevan dan profesional.
-#     """
-#     response = model.generate_content(prompt)
-#     return response.text.strip().split('\n')
-
-# def recommend_initial_questions():
-#     prompt = """
-#     Berikan 3 contoh pertanyaan penting terkait topik makroekonomi global yang cocok untuk ditanyakan ke chatbot analis ekonomi. Buatlah padat dan relevan dengan isu dunia saat ini.
-#     """
-#     response = model.generate_content(prompt)
-#     text = response.text.strip()
-#     lines = text.split('\n')
-#     questions = []
-#     for line in lines:
-#         line = line.strip()
-#         if line:
-#             line = re.sub(r'^\s*\d+[\.\)]\s*', '', line)
-#             questions.append(line)
-#     return questions[:4]
+    elif chat_option == "4 Wheels":
+        return []
+    elif chat_option == "Retail General":
+        return []
+    elif chat_option == "Retail Beauty":
+        return []
+    elif chat_option == "Retail FnB":
+        return []
+    elif chat_option == "Retail Drugstore":
+        return []
