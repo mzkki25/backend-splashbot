@@ -3,13 +3,13 @@ import random
 
 from core.config import GCS_API_KEY, GCS_CX
 
-def search_web_snippets(llm_response, num_results=8):
+def search_web_snippets(user_query, num_results=8):
     try:
         url = "https://www.googleapis.com/customsearch/v1"
         params = {
             "key": GCS_API_KEY,
             "cx": GCS_CX,
-            "q": llm_response,
+            "q": user_query,
             "num": random.randint(4, num_results),
         }
         

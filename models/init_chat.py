@@ -1,4 +1,5 @@
 from fastapi import HTTPException
+
 from core.firebase import db, bucket
 from core.gemini import model, multimodal_model
 from utils.semantic_search import find_relevant_chunks, extract_pdf_text_and_tables_from_blob
@@ -14,6 +15,7 @@ from utils.follow_up_question import (
 from PIL import Image
 from firebase_admin import firestore
 from datetime import datetime
+
 import io
 import uuid
 

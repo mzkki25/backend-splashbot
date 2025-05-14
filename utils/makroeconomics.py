@@ -8,34 +8,37 @@ def two_wheels_model(text):
         prompt = f"""
             Kamu adalah **SPLASHBot**, sebuah AI Agent yang bertugas membuat **blok kode Python** untuk menjawab pertanyaan berbasis data 2 wheels menggunakan **pandas**.
 
-            df = pd.read_csv('dataset/fix_2w.csv')
-            Nama DataFrame: `df` (Data ini sudah di definisikan sebelumnya, kamu hanya perlu menggunakannya).
-
-            ### Data yang Disediakan (Kolom Kategorikal):
+            ### Konteks Dataset:
+            - Dataset: `df = pd.read_csv('dataset/fix_2w.csv')` (sudah di-load sebelumnya)
             - Kolom: {df.columns.tolist()}
-            - Kota (`kab`): {df['kab'].unique().tolist()}
             - Provinsi (`prov`): {df['prov'].unique().tolist()}
+            - Kota (`kab`): {df['kab'].unique().tolist()}
             - Tahun (`year`): {df['year'].unique().tolist()}
-            - Target variabel (penjualan): `penjualan` (dalam satuan unit)
-            - Target prediksi: `prediksi` (dalam satuan unit)
+            - Target utama: `penjualan` (unit)
+            - Prediksi: `prediksi` (unit)
+            - Kolom numerik: Semua selain `prov`, `kab` (termasuk `cluster` hasil KMeans)
+            - Data NaN harus diisi dengan `fillna(0)`
+            - **Hasil akhir harus disimpan ke variabel bernama `final_answer`**
 
-            ### Informasi Penting:
-            - Nilai kategorikal hanya terdapat pada kolom `prov` dan `kab`
-            - Semua kolom lainnya adalah numerik
-            - Kolom `cluster` adalah hasil KMeans (numerik)
-            - Jika ada nilai NaN, isi menggunakan `fillna(0)`
-            - Jika hasil akhir **bukan DataFrame**, ubah ke bentuk DataFrame
-            - Hasil akhir harus disimpan ke dalam variabel bernama **`final_answer`**
-            - **Tidak perlu menambahkan penjelasan apapun**—**hanya blok kode Python**
+            ### Aturan Wajib:
+            1. Jawaban hanya boleh berupa **blok kode Python**, tanpa penjelasan atau komentar apapun.
+            2. Jika **pertanyaan TIDAK RELEVAN atau TIDAK DAPAT dijawab** menggunakan dataset tersebut, tampilkan:
+            `raise ValueError("Pertanyaan tidak dapat dijawab")`
+            3. Jika **pertanyaan DAPAT dijawab**, maka:
+            - Gunakan `pandas` untuk manipulasi datanya.
+            - Simpan hasil akhir dalam `final_answer` (dalam bentuk DataFrame).
+            4. Jangan buat asumsi atau interpolasi data yang tidak ada di dataset.
+            5. Jangan mencetak apapun, hanya deklarasi kode.
 
             ### Pertanyaan dari Pengguna:
             **"{text}"**
 
             ### Tugas Anda:
-            Buat dan tampilkan **blok kode Python** untuk menjawab pertanyaan tersebut, sesuai instruksi di atas.
+            Tulis blok kode Python yang valid dan sesuai dengan instruksi di atas.
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
+        print(response)
 
         local_ns = {'df': df}
         exec(response, {}, local_ns)
@@ -79,7 +82,7 @@ def two_wheels_model(text):
         else:
             formatted_result += str(answer_the_code)
 
-        return f"### Jawaban SPLASHBot:\n{explanation}\n\n---\n{formatted_result}"
+        return f"### Ringkasan Temuan SPLASHBot 🤖:\n{explanation}\n\n---\n{formatted_result}"
 
     except Exception as e:
         fallback_response = model.generate_content(
@@ -95,7 +98,7 @@ def two_wheels_model(text):
             """
         ).text.replace("```python", "").replace("```", "").strip()
 
-        return f"### SPLASHBot Tidak Dapat Menjawab:\n{fallback_response}"
+        return f"### Maaf, SPLASHBot Belum Dapat Menjawab 😢:\n{fallback_response}"
     
 def four_wheels_model(text):
     answer = "Four wheels model masih dalam tahap pengembangan dan belum tersedia untuk digunakan. Silakan coba lagi nanti."

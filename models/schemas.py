@@ -11,8 +11,19 @@ class UserLogin(BaseModel):
     password: str
 
 class ChatRequest(BaseModel):
-    prompt: str
+    prompt: str 
     file_id: Optional[str] = None
+    chat_options: Literal[
+        "General Macroeconomics",
+        "2 Wheels",
+        "4 Wheels",
+        "Retail General",
+        "Retail Beauty",
+        "Retail FnB",
+        "Retail Drugstore"
+    ] = Field(default="General Macroeconomics")
+
+class ChatInit(BaseModel):
     chat_options: Literal[
         "General Macroeconomics",
         "2 Wheels",

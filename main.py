@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api import auth, chat, upload, history, messages
+from api import auth, chat, upload, history, messages, init_question
 
 app = FastAPI(title="SPLASHBot API")
 
@@ -18,6 +18,7 @@ app.include_router(upload.router, prefix="/upload", tags=["File Upload"])
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
 app.include_router(history.router, prefix="/history", tags=["History"])
 app.include_router(messages.router, prefix="/{chat_session}/messages", tags=["Messages"])
+app.include_router(init_question.router, prefix="/init_questions", tags=["Initial Questions"])
 
 if __name__ == "__main__":
     import uvicorn
