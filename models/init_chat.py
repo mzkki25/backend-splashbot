@@ -178,9 +178,11 @@ class Chat:
             "Retail FnB": retail_fnb_model,
             "Retail Drugstore": retail_drugstore_model
         }
+
         model_func = model_map.get(chat_option)
         if not model_func:
             raise HTTPException(status_code=400, detail="Invalid chat option")
+        
         return model_func(prompt)
 
     def save_chat_messages(self, chat_ref, chat_session, prompt, response, file_id_input, references):

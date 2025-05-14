@@ -4,6 +4,10 @@ from core.firebase import db
 from api.deps import get_current_user
 from typing import List
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 router = APIRouter()
 
 @router.get("", response_model=List[ChatMessage])
@@ -14,12 +18,16 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
         chat_ref = db.collection('chats').document(chat_session)
         chat_doc = chat_ref.get()
 
+        logger.info(f"Fetching chat messages for session: {chat_session} for user: {user_id}")
+
         if not chat_doc.exists:
+            logger.warning(f"Chat session not found: {chat_session} for user: {user_id}")
             raise HTTPException(status_code=404, detail="Chat not found")
 
         chat_data = chat_doc.to_dict()
 
         if chat_data['user_id'] != user_id:
+            logger.warning(f"Unauthorized access attempt to chat session: {chat_session} by user: {user_id}")
             raise HTTPException(status_code=403, detail="Unauthorized access to chat")
 
         messages = chat_data.get('messages', [])
@@ -27,6 +35,8 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
         messages_sorted = sorted(
             messages, key=lambda x: x.get('created_at', 0) 
         )
+
+        logger.info(f"Sorting chat messages for session: {chat_session} for user: {user_id}")
 
         results = []
         for msg in messages_sorted:
@@ -49,8 +59,11 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
                     timestamp=timestamp_str,
                     references=msg.get('references', [])
                 ))
+            
+        logger.info(f"Chat messages fetched successfully for session: {chat_session} for user: {user_id}")
 
         return results
 
     except Exception as e:
+        logger.error(f"Error fetching chat messages for session {chat_session} for user {user['uid']}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))

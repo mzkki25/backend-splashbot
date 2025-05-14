@@ -7,6 +7,10 @@ from firebase_admin import firestore
 import uuid
 import os
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 router = APIRouter()
 
 @router.post("")
@@ -17,9 +21,13 @@ async def upload_file(file: UploadFile = File(...), user = Depends(get_current_u
         file_extension = os.path.splitext(file.filename)[1]
         file_path = f"users/{user_id}/{file_id}{file_extension}"
 
+        logger.info(f"Uploading file: {file.filename} for user: {user_id}")
+
         blob = bucket.blob(file_path)
         contents = await file.read()
         blob.upload_from_string(contents, content_type=file.content_type)
+
+        logger.info(f"File uploaded successfully: {file.filename} for user: {user_id}")
 
         db.collection('files').document(file_id).set({
             'user_id': user_id,
@@ -30,6 +38,8 @@ async def upload_file(file: UploadFile = File(...), user = Depends(get_current_u
             'created_at': firestore.SERVER_TIMESTAMP
         })
 
+        logger.info(f"File metadata saved to Firestore: {file_id}")
+
         return JSONResponse({
             "success": True,
             "file_id": file_id,
@@ -37,4 +47,5 @@ async def upload_file(file: UploadFile = File(...), user = Depends(get_current_u
         }, status_code=201)
 
     except Exception as e:
+        logger.error(f"Error uploading file for user {user['uid']}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))

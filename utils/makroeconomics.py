@@ -1,6 +1,10 @@
 import pandas as pd
 from core.gemini import model
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')
 
@@ -38,7 +42,7 @@ def two_wheels_model(text):
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
-        print(response)
+        logger.info(f"Generated code: \n{response}")
 
         local_ns = {'df': df}
         exec(response, {}, local_ns)

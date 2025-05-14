@@ -4,6 +4,10 @@ from models.schemas import ChatRequest, ChatResponse
 from api.deps import get_current_user
 from models.init_chat import Chat
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 router = APIRouter()
 chat_handler = Chat()
 
@@ -18,13 +22,19 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user=Depend
             chat_session, user_id, prompt, file_id_input
         )
 
+        logger.info(f"Chat session initialized/updated: {chat_session}")
+
         response, file_url, references, follow_up_question = await chat_handler.generate_response(
             chat_request.chat_options, prompt, file_id_input, last_response
         )
 
+        logger.info(f"Response generated for chat session: {chat_session}")
+
         chat_handler.save_chat_messages(
             chat_ref, chat_session, prompt, response, file_id_input, references
         )
+
+        logger.info(f"Chat messages saved for session: {chat_session}")
 
         return JSONResponse(content={
             "response": response,
@@ -35,4 +45,5 @@ async def process_chat(chat_session: str, chat_request: ChatRequest, user=Depend
         }, status_code=200)
 
     except Exception as e:
+        logger.error(f"Error processing chat session {chat_session}: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))

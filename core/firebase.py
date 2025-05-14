@@ -8,5 +8,5 @@ firebase_admin.initialize_app(cred, {
     'storageBucket': FIREBASE_STORAGE_BUCKET
 })
 
-db = firestore.client()
+db = firestore.client(database_id='splashbot-database')
 bucket = storage.bucket()
