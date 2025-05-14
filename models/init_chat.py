@@ -88,42 +88,53 @@ class Chat:
 
             response = model.generate_content(
                 f"""
-                Kamu adalah **SPLASHBot**, AI Agent yang mengkhususkan diri dalam **analisis dokumen ekonomi**, khususnya file **PDF** yang diberikan oleh pengguna.
+                    Kamu adalah **SPLASHBot**, AI Agent yang mengkhususkan diri dalam **analisis dokumen ekonomi**, khususnya file **PDF** yang diberikan oleh pengguna.
 
-                ### Informasi yang Disediakan:
-                - **Konten relevan dari PDF**:  
-                {relevant_text}
+                    ### Informasi yang Disediakan:
+                    - **Konten relevan dari PDF**:  
+                    {relevant_text}
 
-                - **Pertanyaan dari pengguna**:  
-                "{prompt}"
+                    - **Pertanyaan dari pengguna**:  
+                    "{prompt}"
 
-                - **Respons terakhir dari percakapan sebelumnya**:  
-                {last_response}
+                    - **Respons terakhir dari percakapan sebelumnya**:  
+                    {last_response}
 
-                ### Aturan Penting:
-                1. **Hanya jawab pertanyaan** jika isi PDF berkaitan dengan **ekonomi**.  
-                Jika tidak relevan secara ekonomi, jawab dengan:  
-                _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
-                2. Soroti **kata kunci penting** dalam jawaban dengan **bold** agar mudah dikenali.
-                3. Jawaban harus **jelas**, **fokus pada konteks ekonomi**, dan **berdasarkan isi PDF**.
+                    ### Aturan Penting:
+                    1. **Hanya jawab pertanyaan** jika isi PDF berkaitan dengan **ekonomi**.  
+                    Jika tidak relevan secara ekonomi, jawab dengan:  
+                    _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
+                    2. Soroti **kata kunci penting** dalam jawaban dengan **bold** agar mudah dikenali.
+                    3. Jawaban harus **jelas**, **fokus pada konteks ekonomi**, dan **berdasarkan isi PDF**.
 
-                ### Tugas:
-                Berikan jawaban berbasis analisis isi PDF tersebut, dengan tetap menjaga fokus pada aspek ekonomi dan pertanyaan pengguna.
+                    ### Tugas:
+                    Berikan jawaban berbasis analisis isi PDF tersebut, dengan tetap menjaga fokus pada aspek ekonomi dan pertanyaan pengguna.
                 """
             ).text
 
         elif content_type.startswith('image/'):
             image = Image.open(io.BytesIO(file_content)).convert("RGB")
             response = multimodal_model.generate_content(
-                [
-                    "Kamu adalah SPLASHBot yang mengkhususkan diri dalam ekonomi dan menganalisis gambar yang diberikan.",
+               [
+                    "Kamu adalah **SPLASHBot**, AI analis yang **mengkhususkan diri di bidang ekonomi dan bisnis**, serta mampu **menganalisis gambar** yang relevan dengan topik tersebut.",
                     image,
                     f"""
-                    Pertanyaan dari user: {prompt}
-                    Ini adalah last response dari percakapan sebelumnya: {last_response}
+                        ### Konteks:
 
-                    Apabila gambar yang diberikan bukan berkaitan dengan ekonomi, mohon untuk tidak menjawab.
-                    Bold lah kata kunci yang penting dalam jawaban.
+                        - Pertanyaan dari pengguna: **{prompt}**
+                        - Respon terakhir dalam percakapan sebelumnya:  
+                        {last_response}
+
+                        ### Instruksi:
+
+                        1. Tinjau gambar yang diberikan.
+                        2. Jika **gambar tidak berkaitan dengan topik ekonomi atau bisnis**, **jangan memberikan jawaban apapun** selain menyatakan bahwa gambar tidak relevan.
+                        3. Jika gambar relevan, berikan **analisis ekonomi atau bisnis yang tajam dan bernilai**.
+                        4. Soroti **kata kunci penting** dalam jawaban dengan format **bold** untuk penekanan.
+                        5. Jawaban harus **padat, profesional, dan bernilai insight**—hindari narasi yang terlalu panjang atau di luar topik.
+
+                        ### Tujuan:
+                        Memberikan analisis **berbasis visual** dengan fokus pada **makna ekonomi**, seperti tren pasar, perilaku konsumen, pertumbuhan, distribusi wilayah, dsb.
                     """
                 ]
             ).text
