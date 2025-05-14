@@ -3,7 +3,7 @@ import random
 
 from core.config import GCS_API_KEY, GCS_CX
 
-def search_web_snippets(llm_response, num_results=7):
+def search_web_snippets(llm_response, num_results=8):
     try:
         url = "https://www.googleapis.com/customsearch/v1"
         params = {

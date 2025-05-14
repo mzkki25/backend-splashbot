@@ -149,16 +149,19 @@ class Chat:
             ### Informasi Terkini dari Internet:
             {snippets}
 
+            ### Referensi:
+            {references}
+
             ### Catatan Penting:
-            - Hanya gunakan **informasi dari internet** jika **relevan dengan topik ekonomi**.
+            - Gunakan **informasi dari internet** dan semua pengetahuan-mu jika **relevan dengan topik ekonomi**.
             - **Abaikan** informasi yang tidak berkaitan dengan ekonomi.
             - **Jangan menyebutkan atau mengutip link** dari internet secara eksplisit dalam jawaban.
-            - **Fokuskan jawaban** hanya pada topik **ekonomi**.
             - Gunakan penekanan (**bold**) pada **kata kunci penting** dalam jawaban agar lebih jelas bagi pengguna.
+            - Sebisa mungkin, jangan menjawab dengan "saya tidak tahu" atau "saya tidak bisa menjawab". Gunakan pengetahuan yang ada untuk memberikan jawaban yang informatif.
 
             ### Tugasmu:
-            Berikan jawaban yang **jelas**, **relevan**, dan **berbasis ekonomi** terhadap pertanyaan pengguna. Jika pertanyaannya **tidak berkaitan dengan ekonomi**, cukup balas dengan:  
-            _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
+            Berikan jawaban yang **jelas**, **relevan**, dan **berbasis ekonomi** terhadap pertanyaan pengguna. 
+            Jika pertanyaannya **tidak berkaitan dengan ekonomi**, cukup balas dengan: _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
             """
         ).text
 
