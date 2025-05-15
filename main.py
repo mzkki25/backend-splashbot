@@ -22,4 +22,5 @@ app.include_router(messages.router, prefix="/{chat_session}/messages", tags=["Me
 app.include_router(init_question.router, prefix="/init_questions", tags=["Initial Questions"])
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    uvicorn.run(port=int(os.environ.get("PORT", 8000)), host='0.0.0.0')
