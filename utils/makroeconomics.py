@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 from core.gemini import model
 
 from core.logging_logger import setup_logger
@@ -41,6 +42,9 @@ def two_wheels_model(text):
         """
 
         response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
+        response = re.sub(r"(?s).*?```python(.*?)```", r"\1", response).strip()
+        response = response.encode('utf-8', errors='ignore').decode('utf-8').replace('\r\n', '\n').strip()
+
         logger.info(f"Generated code: \n{response}")
 
         local_ns = {'df': df}

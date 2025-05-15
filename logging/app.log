@@ -629,3 +629,38 @@ except ValueError as e:
 2025-05-15 13:49:57,575 - WARNING - Chat session not found: 704c217c-3f34-4963-a307-5ceb4e66dcbf for user: IozHszTlCVejumiorbR2UnP9srL2
 2025-05-15 13:49:57,577 - ERROR - Error fetching chat messages for session 704c217c-3f34-4963-a307-5ceb4e66dcbf for user IozHszTlCVejumiorbR2UnP9srL2: 404: Chat not found
 2025-05-15 13:50:00,112 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:03:38,063 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 16:03:38,064 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 16:03:44,394 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 16:03:45,303 - INFO - Use pytorch device_name: cpu
+2025-05-15 16:03:45,303 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:05:16,437 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:05:16,559 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:05:16,889 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:05:17,007 - INFO - Fetching chat messages for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:05:17,008 - WARNING - Chat session not found: 79f4527d-2f28-4afb-8c64-2c68fcc02255 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:05:17,010 - ERROR - Error fetching chat messages for session 79f4527d-2f28-4afb-8c64-2c68fcc02255 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:05:18,694 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:05:21,984 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:05:22,926 - INFO - Chat session initialized/updated: 79f4527d-2f28-4afb-8c64-2c68fcc02255
+2025-05-15 16:05:25,509 - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provincial_sales = df.groupby('prov')['penjualan'].sum()
+average_sales_by_province = df.groupby('prov')['penjualan'].mean()
+average_density_by_province = df.groupby('prov')['kepadatan_penduduk_kabkota'].mean()
+average_wage_by_province = df.groupby('prov')['upah_ratarata_perjam'].mean()
+
+
+final_answer = pd.DataFrame({
+    'Total Penjualan': provincial_sales,
+    'Rata-rata Penjualan': average_sales_by_province,
+    'Rata-rata Kepadatan Penduduk': average_density_by_province,
+    'Rata-rata Upah Rata-rata': average_wage_by_province
+})
+2025-05-15 16:05:30,976 - INFO - Response generated for chat session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
+2025-05-15 16:05:31,068 - INFO - Chat messages saved for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
