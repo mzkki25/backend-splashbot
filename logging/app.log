@@ -664,3 +664,62 @@ final_answer = pd.DataFrame({
 })
 2025-05-15 16:05:30,976 - INFO - Response generated for chat session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
 2025-05-15 16:05:31,068 - INFO - Chat messages saved for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
+2025-05-15 16:12:37,314 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 16:12:37,314 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 16:12:42,344 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 16:12:42,656 - INFO - Use pytorch device_name: cpu
+2025-05-15 16:12:42,656 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 16:12:51,375 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,012 - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:53,691 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:56,582 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:57,435 - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:58,523 - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:13:02,939 - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:11,402 - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:16,172 - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:23,695 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,922 - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:25,531 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:27,585 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:28,355 - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:30,166 - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:34,110 - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a

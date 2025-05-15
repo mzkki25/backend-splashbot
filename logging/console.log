@@ -4142,3 +4142,374 @@ final_answer = pd.DataFrame({
 2025-05-15 16:05:31,068 - Chatbot Log - INFO - Chat messages saved for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
 2025-05-15 16:05:31,068 - Chatbot Log - INFO - Chat messages saved for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
 2025-05-15 16:05:31,068 - Chatbot Log - INFO - Chat messages saved for session: 79f4527d-2f28-4afb-8c64-2c68fcc02255
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,375 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:51,825 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,010 - Chatbot Log - INFO - Fetching chat messages for session: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,011 - Chatbot Log - WARNING - Chat session not found: b402b0c7-d3ce-4d48-aad0-26120d42d041 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:52,012 - Chatbot Log - ERROR - Error fetching chat messages for session b402b0c7-d3ce-4d48-aad0-26120d42d041 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:53,691 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:56,582 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:57,435 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:12:58,523 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+final_answer = df.groupby('year')['penjualan'].sum().reset_index()
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:02,939 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:03,011 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:10,210 - Chatbot Log - INFO - Chat session initialized/updated: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:11,402 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+df_filtered = df[(df['year'] >= 2020) & (df['year'] <= 2023)]
+final_answer = df_filtered.groupby(['year', 'cluster'])['penjualan'].sum().unstack()
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,172 - Chatbot Log - INFO - Response generated for chat session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:16,269 - Chatbot Log - INFO - Chat messages saved for session: b402b0c7-d3ce-4d48-aad0-26120d42d041
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,695 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,827 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,919 - Chatbot Log - INFO - Fetching chat messages for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,921 - Chatbot Log - WARNING - Chat session not found: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:23,922 - Chatbot Log - ERROR - Error fetching chat messages for session aa30f0f0-885a-4d7f-b417-aa50b52b9f7a for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:25,531 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:27,585 - Chatbot Log - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:28,355 - Chatbot Log - INFO - Chat session initialized/updated: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:30,166 - Chatbot Log - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df.fillna(0, inplace=True)
+
+provinsi_penjualan = df.groupby('prov')['penjualan'].sum()
+provinsi_pertumbuhan = provinsi_penjualan.sort_values(ascending=False)
+
+tertinggi = provinsi_pertumbuhan.index[0]
+terendah = provinsi_pertumbuhan.index[-1]
+
+final_answer = pd.DataFrame({
+    'Provinsi Pertumbuhan Tertinggi': [tertinggi],
+    'Provinsi Pertumbuhan Terendah': [terendah]
+})
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,110 - Chatbot Log - INFO - Response generated for chat session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a

@@ -5,6 +5,13 @@ from core.gemini import model
 from core.logging_logger import setup_logger
 logger = setup_logger(__name__)
 
+def clean_code(code: str) -> str:
+    code = re.sub(r"(?s).*?```python(.*?)```", r"\1", code) if '```python' in code else code
+    code = code.encode('utf-8', errors='ignore').decode('utf-8')  
+    code = re.sub(r'[\u200b\u200e\u200f\ufeff\u00a0\u00ad]', '', code)  
+    code = code.replace('\r\n', '\n').strip()  
+    return code
+
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')
 
@@ -41,11 +48,8 @@ def two_wheels_model(text):
             Tulis blok kode Python yang valid dan sesuai dengan instruksi di atas.
         """
 
-        response = model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip()
-        response = re.sub(r"(?s).*?```python(.*?)```", r"\1", response).strip()
-        response = response.encode('utf-8', errors='ignore').decode('utf-8').replace('\r\n', '\n').strip()
-
-        logger.info(f"Generated code: \n{response}")
+        generated_code = model.generate_content(contents=prompt).text
+        response = clean_code(generated_code)
 
         local_ns = {'df': df}
         exec(response, {}, local_ns)
