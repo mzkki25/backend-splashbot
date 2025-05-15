@@ -4,9 +4,8 @@ from models.schemas import ChatInit
 
 from utils.initial_question import initial_questions_gm, initial_questions_ngm
 
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 router = APIRouter()
 

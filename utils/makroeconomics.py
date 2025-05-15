@@ -1,9 +1,8 @@
 import pandas as pd
 from core.gemini import model
 
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')

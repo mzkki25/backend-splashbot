@@ -4,9 +4,8 @@ from models.schemas import ChatRequest, ChatResponse
 from api.deps import get_current_user
 from models.init_chat import Chat
 
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 router = APIRouter()
 chat_handler = Chat()

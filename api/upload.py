@@ -7,9 +7,8 @@ from firebase_admin import firestore
 import uuid
 import os
 
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 router = APIRouter()
 

@@ -1,0 +1,52 @@
+2025-05-15 09:48:14,599 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 09:48:14,599 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 09:48:20,898 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 09:48:21,237 - INFO - Use pytorch device_name: cpu
+2025-05-15 09:48:21,237 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 09:50:28,360 - INFO - Fetching chat history for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:50:28,904 - INFO - Chat history fetched successfully for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:50:29,053 - INFO - Fetching chat messages for session: 68349c73-4f4d-4853-8f32-2640a0cdf848 for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:50:29,053 - WARNING - Chat session not found: 68349c73-4f4d-4853-8f32-2640a0cdf848 for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:50:29,053 - ERROR - Error fetching chat messages for session 68349c73-4f4d-4853-8f32-2640a0cdf848 for user Udt024ytXcVrhXu09qHRVJXgg1c2: 404: Chat not found
+2025-05-15 09:50:30,928 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:51:08,726 - INFO - Fetching chat history for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:08,812 - INFO - Chat history fetched successfully for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:08,953 - INFO - Fetching chat messages for session: 0f659fae-f7fb-44fe-936a-5d6c2ce60729 for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:08,953 - WARNING - Chat session not found: 0f659fae-f7fb-44fe-936a-5d6c2ce60729 for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:08,962 - ERROR - Error fetching chat messages for session 0f659fae-f7fb-44fe-936a-5d6c2ce60729 for user Udt024ytXcVrhXu09qHRVJXgg1c2: 404: Chat not found
+2025-05-15 09:51:10,765 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:51:19,276 - INFO - User login attempt: zuhdi
+2025-05-15 09:51:19,292 - INFO - User found: zuhdi@gmail.com
+2025-05-15 09:51:19,738 - INFO - Custom token created for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:22,295 - INFO - Fetching chat history for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:22,388 - INFO - Chat history fetched successfully for user: Udt024ytXcVrhXu09qHRVJXgg1c2
+2025-05-15 09:51:24,123 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:51:25,822 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:54:43,538 - INFO - User login attempt: akmal
+2025-05-15 09:54:43,538 - INFO - User found: akmal@gmail.com
+2025-05-15 09:54:43,872 - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:54:46,367 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:54:46,473 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:54:48,262 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:54:49,788 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:55:19,309 - INFO - User login attempt: akmal
+2025-05-15 09:55:19,309 - INFO - User found: akmal@gmail.com
+2025-05-15 09:55:19,655 - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:55:25,219 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:55:25,301 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:55:27,147 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:55:28,804 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:58:07,841 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:07,937 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:08,080 - INFO - Fetching chat messages for session: 1b17c6b7-2215-4473-b82f-3349e41d44a7 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:08,080 - WARNING - Chat session not found: 1b17c6b7-2215-4473-b82f-3349e41d44a7 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:08,086 - ERROR - Error fetching chat messages for session 1b17c6b7-2215-4473-b82f-3349e41d44a7 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 09:58:09,906 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:58:15,563 - INFO - User login attempt: akmal
+2025-05-15 09:58:15,563 - INFO - User found: akmal@gmail.com
+2025-05-15 09:58:15,894 - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:18,580 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:18,663 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 09:58:20,362 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 09:58:21,993 - INFO - Initial questions fetched for chat option: General Macroeconomics

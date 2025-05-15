@@ -5,9 +5,8 @@ from models.schemas import UserCreate, UserLogin
 from core.firebase import db, auth
 from firebase_admin import firestore
 
-import logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 router = APIRouter()
 
@@ -40,6 +39,7 @@ async def signup(user: UserCreate):
         )
 
     except Exception as e:
+        logger.error(f"Error creating user: {str(e)}")
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
 
 @router.post("/login")
