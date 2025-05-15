@@ -50,3 +50,24 @@
 2025-05-15 09:58:18,663 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
 2025-05-15 09:58:20,362 - INFO - Initial questions fetched for chat option: General Macroeconomics
 2025-05-15 09:58:21,993 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:03:25,207 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 10:03:25,207 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 10:03:30,258 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 10:03:30,656 - INFO - Use pytorch device_name: cpu
+2025-05-15 10:03:30,656 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 10:09:52,894 - INFO - User login attempt: akmal
+2025-05-15 10:09:52,905 - INFO - User found: akmal@gmail.com
+2025-05-15 10:11:54,119 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 10:11:54,119 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 10:11:58,564 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 10:11:58,841 - INFO - Use pytorch device_name: cpu
+2025-05-15 10:11:58,841 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 10:12:14,938 - INFO - User login attempt: akmal
+2025-05-15 10:12:14,940 - INFO - User found: akmal@gmail.com
+2025-05-15 10:12:15,286 - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:12:22,482 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:12:22,587 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:12:25,347 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:12:27,033 - INFO - Initial questions fetched for chat option: General Macroeconomics
