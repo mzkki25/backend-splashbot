@@ -71,3 +71,180 @@
 2025-05-15 10:12:22,587 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
 2025-05-15 10:12:25,347 - INFO - Initial questions fetched for chat option: General Macroeconomics
 2025-05-15 10:12:27,033 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:15:43,591 - INFO - Note: NumExpr detected 18 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-15 10:15:43,591 - INFO - NumExpr defaulting to 8 threads.
+2025-05-15 10:15:50,114 - WARNING - From C:\Users\Huawei\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-15 10:15:50,430 - INFO - Use pytorch device_name: cpu
+2025-05-15 10:15:50,430 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-05-15 10:15:58,631 - INFO - User login attempt: akmal
+2025-05-15 10:15:58,633 - INFO - User found: akmal@gmail.com
+2025-05-15 10:15:58,996 - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:16:01,514 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:16:01,606 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:16:03,463 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:16:05,399 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:16:36,038 - INFO - Chat session initialized/updated: 99c5a8ed-45e0-4d70-aab4-9cbfc83b6b6d
+2025-05-15 10:16:41,897 - INFO - Response generated for chat session: 99c5a8ed-45e0-4d70-aab4-9cbfc83b6b6d
+2025-05-15 10:16:41,981 - INFO - Chat messages saved for session: 99c5a8ed-45e0-4d70-aab4-9cbfc83b6b6d
+2025-05-15 10:20:17,422 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:20:17,630 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:20:17,764 - INFO - Fetching chat messages for session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:20:17,764 - WARNING - Chat session not found: 5c6cb318-9592-4c0b-a69e-4b5f153f999b for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:20:17,764 - ERROR - Error fetching chat messages for session 5c6cb318-9592-4c0b-a69e-4b5f153f999b for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:20:19,589 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:20:33,498 - INFO - Chat session initialized/updated: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:20:39,915 - INFO - Response generated for chat session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:20:40,006 - INFO - Chat messages saved for session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:22:11,954 - INFO - Chat session initialized/updated: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:22:19,098 - INFO - Response generated for chat session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:22:19,198 - INFO - Chat messages saved for session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:25:28,841 - INFO - Chat session initialized/updated: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:25:35,498 - INFO - Response generated for chat session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:25:35,590 - INFO - Chat messages saved for session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:27:59,540 - INFO - Chat session initialized/updated: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:28:02,106 - INFO - Generated code: 
+import pandas as pd
+
+df = pd.read_csv('dataset/fix_2w.csv')
+df = df.fillna(0)
+
+provinsi = 'DKI Jakarta'
+tahun = 2023
+
+df_filtered = df[(df['prov'] == provinsi) & (df['year'] == tahun)]
+
+if df_filtered.empty:
+    raise ValueError("Data tidak ditemukan untuk DKI Jakarta pada tahun 2023")
+
+correlation_matrix = df_filtered.corr()
+inflasi_corr = correlation_matrix['penjualan'].drop('penjualan')
+
+positive_corr = inflasi_corr[inflasi_corr > 0].sort_values(ascending=False)
+
+if positive_corr.empty:
+    final_answer = pd.DataFrame({'Faktor': ['Tidak ada faktor dengan korelasi positif signifikan']})
+else:
+    final_answer = pd.DataFrame({'Faktor': positive_corr.index, 'Korelasi': positive_corr.values})
+2025-05-15 10:28:12,156 - INFO - Response generated for chat session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:28:12,257 - INFO - Chat messages saved for session: 5c6cb318-9592-4c0b-a69e-4b5f153f999b
+2025-05-15 10:28:36,404 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 10:28:36,414 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:28:36,581 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:28:36,698 - INFO - Fetching chat messages for session: cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:28:36,698 - WARNING - Chat session not found: cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:28:36,708 - ERROR - Error fetching chat messages for session cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:28:38,707 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:28:43,120 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 10:28:44,689 - INFO - Chat session initialized/updated: cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9
+2025-05-15 10:28:47,140 - INFO - Generated code: 
+import pandas as pd
+
+try:
+    df = pd.read_csv('dataset/fix_2w.csv')
+    df = df.fillna(0)
+
+    if 'pdrb_adhk' not in df.columns or 'penjualan' not in df.columns or 'kab' not in df.columns or 'year' not in df.columns or 'prediksi' not in df.columns:
+        raise ValueError("Kolom yang diperlukan tidak ditemukan dalam dataset.")
+
+    df_jabar = df[(df['prov'] == 'Jawa Barat') & (df['year'] >= 2018) & (df['year'] <= 2023)].copy()
+
+    if df_jabar.empty:
+        raise ValueError("Tidak ada data untuk Jawa Barat antara tahun 2018 dan 2023.")
+
+    df_jabar['margin'] = df_jabar['prediksi'] - df_jabar['penjualan']
+
+    final_answer = df_jabar.groupby('kab')[['pdrb_adhk', 'margin']].agg(['mean', 'median'])
+
+    final_answer.columns = ['pdrb_adhk_mean', 'pdrb_adhk_median', 'margin_mean', 'margin_median']
+    final_answer = final_answer.reset_index()
+
+except Exception as e:
+    raise ValueError(f"Terjadi kesalahan: {e}")
+2025-05-15 10:28:52,556 - INFO - Response generated for chat session: cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9
+2025-05-15 10:28:52,640 - INFO - Chat messages saved for session: cd0bdb5d-36ba-4cdd-8fd3-90075b43f9f9
+2025-05-15 10:33:18,332 - INFO - Initial questions fetched for chat option: 2 Wheels
+2025-05-15 10:33:18,368 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:33:18,586 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:33:18,707 - INFO - Fetching chat messages for session: 826e6d1a-7c3e-4476-9f61-90329b15e022 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:33:18,718 - WARNING - Chat session not found: 826e6d1a-7c3e-4476-9f61-90329b15e022 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:33:18,719 - ERROR - Error fetching chat messages for session 826e6d1a-7c3e-4476-9f61-90329b15e022 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:33:20,891 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:34:06,595 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:06,700 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:06,799 - INFO - Fetching chat messages for session: e4dbcc53-9064-4499-87c4-0f60ab61f7b8 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:06,806 - WARNING - Chat session not found: e4dbcc53-9064-4499-87c4-0f60ab61f7b8 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:06,807 - ERROR - Error fetching chat messages for session e4dbcc53-9064-4499-87c4-0f60ab61f7b8 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:34:08,510 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:34:11,673 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:11,788 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:11,890 - INFO - Fetching chat messages for session: 4703040f-1405-4c9c-857c-bf774489ffef for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:11,901 - WARNING - Chat session not found: 4703040f-1405-4c9c-857c-bf774489ffef for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:11,905 - ERROR - Error fetching chat messages for session 4703040f-1405-4c9c-857c-bf774489ffef for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:34:13,708 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:34:15,847 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:15,958 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:16,066 - INFO - Fetching chat messages for session: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:16,077 - WARNING - Chat session not found: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:34:16,080 - ERROR - Error fetching chat messages for session ba2179ff-4ccd-432f-b1fb-1028f897d23e for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:34:18,034 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:39:38,407 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:38,624 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:38,865 - INFO - Fetching chat messages for session: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:38,867 - WARNING - Chat session not found: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:38,868 - ERROR - Error fetching chat messages for session ba2179ff-4ccd-432f-b1fb-1028f897d23e for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:39:42,224 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:39:48,095 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:48,272 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:48,399 - INFO - Fetching chat messages for session: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:48,399 - WARNING - Chat session not found: ba2179ff-4ccd-432f-b1fb-1028f897d23e for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:39:48,399 - ERROR - Error fetching chat messages for session ba2179ff-4ccd-432f-b1fb-1028f897d23e for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:39:50,216 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:40:17,183 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:17,616 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:17,965 - INFO - Fetching chat messages for session: 9d7ab19a-d64d-47a0-9300-7015b0aa1dc0 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:17,965 - WARNING - Chat session not found: 9d7ab19a-d64d-47a0-9300-7015b0aa1dc0 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:17,965 - ERROR - Error fetching chat messages for session 9d7ab19a-d64d-47a0-9300-7015b0aa1dc0 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:40:21,087 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:40:32,101 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:32,245 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:32,390 - INFO - Fetching chat messages for session: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:32,390 - WARNING - Chat session not found: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:40:32,390 - ERROR - Error fetching chat messages for session 014df4e3-e010-4ad5-a498-194c8518d19c for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:40:34,234 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:41:42,069 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:42,277 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:42,483 - INFO - Fetching chat messages for session: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:42,493 - WARNING - Chat session not found: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:42,496 - ERROR - Error fetching chat messages for session 014df4e3-e010-4ad5-a498-194c8518d19c for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:41:44,492 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:41:48,729 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:48,826 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:48,917 - INFO - Fetching chat messages for session: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:48,925 - WARNING - Chat session not found: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:41:48,925 - ERROR - Error fetching chat messages for session 014df4e3-e010-4ad5-a498-194c8518d19c for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:41:50,919 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:43:30,397 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:43:30,552 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:43:30,828 - INFO - Fetching chat messages for session: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:43:30,828 - WARNING - Chat session not found: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:43:30,830 - ERROR - Error fetching chat messages for session 014df4e3-e010-4ad5-a498-194c8518d19c for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:43:33,242 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:46:07,575 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:46:07,675 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:46:07,881 - INFO - Fetching chat messages for session: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:46:07,885 - WARNING - Chat session not found: 014df4e3-e010-4ad5-a498-194c8518d19c for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:46:07,887 - ERROR - Error fetching chat messages for session 014df4e3-e010-4ad5-a498-194c8518d19c for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:46:10,403 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:47:51,326 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:47:51,434 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:47:51,543 - INFO - Fetching chat messages for session: 9df1afde-e140-4bba-a0f9-93cb99623898 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:47:51,543 - WARNING - Chat session not found: 9df1afde-e140-4bba-a0f9-93cb99623898 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:47:51,543 - ERROR - Error fetching chat messages for session 9df1afde-e140-4bba-a0f9-93cb99623898 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:47:53,333 - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 10:49:59,259 - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:49:59,383 - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:49:59,492 - INFO - Fetching chat messages for session: 5fa0e552-cacc-4c98-b2c4-e650c2997bff for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:49:59,501 - WARNING - Chat session not found: 5fa0e552-cacc-4c98-b2c4-e650c2997bff for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 10:49:59,501 - ERROR - Error fetching chat messages for session 5fa0e552-cacc-4c98-b2c4-e650c2997bff for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 10:50:01,534 - INFO - Initial questions fetched for chat option: General Macroeconomics
