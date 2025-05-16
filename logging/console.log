@@ -4513,3 +4513,570 @@ final_answer = pd.DataFrame({
 2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
 2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
 2025-05-15 16:13:34,179 - Chatbot Log - INFO - Chat messages saved for session: aa30f0f0-885a-4d7f-b417-aa50b52b9f7a
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,112 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 16:14:36,922 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 17:28:00,674 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:33,259 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,078 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:36,245 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:49,765 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,257 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:18:52,328 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:07,391 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,065 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:10,136 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:21,539 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,505 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:24,574 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:27,123 - Chatbot Log - INFO - Chat session initialized/updated: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,670 - Chatbot Log - INFO - Response generated for chat session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:35,810 - Chatbot Log - INFO - Chat messages saved for session: d564bb12-e1f9-4324-8971-0ffa2455978b
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:19:55,747 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,007 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:03,082 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:27,150 - Chatbot Log - INFO - Chat session initialized/updated: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,239 - Chatbot Log - INFO - Response generated for chat session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:34,323 - Chatbot Log - INFO - Chat messages saved for session: ebc69f20-1c13-43e2-a4bd-c7254322e643
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,108 - Chatbot Log - INFO - User created: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:20:50,182 - Chatbot Log - INFO - User data saved to Firestore: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,487 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,491 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:10,496 - Chatbot Log - ERROR - Login error: 401: Invalid password
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,835 - Chatbot Log - INFO - User login attempt: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:13,839 - Chatbot Log - INFO - User found: noviraprajna3@gmail.com
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:14,179 - Chatbot Log - INFO - Custom token created for user: wL1ewFcfhqbPrIMF05sRgrPx0GE2
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:39,649 - Chatbot Log - INFO - Chat session initialized/updated: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,255 - Chatbot Log - INFO - Response generated for chat session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:21:43,327 - Chatbot Log - INFO - Chat messages saved for session: 1eeebc9a-80a6-44eb-921e-29a98c25f70b
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,619 - Chatbot Log - INFO - User login attempt: akmal
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,621 - Chatbot Log - INFO - User found: akmal@gmail.com
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:02,971 - Chatbot Log - INFO - Custom token created for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:18,317 - Chatbot Log - INFO - Chat session initialized/updated: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,481 - Chatbot Log - INFO - Response generated for chat session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:45:21,586 - Chatbot Log - INFO - Chat messages saved for session: ffcb8cb6-e521-4afd-a6ca-8628dcbda6e1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:09,903 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,505 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:12,572 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:14,657 - Chatbot Log - INFO - Chat session initialized/updated: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,212 - Chatbot Log - INFO - Response generated for chat session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:51:17,288 - Chatbot Log - INFO - Chat messages saved for session: 775ed25e-3893-4871-a02a-0dceafd0a2c1
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,360 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,520 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,601 - Chatbot Log - INFO - Fetching chat messages for session: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,603 - Chatbot Log - WARNING - Chat session not found: 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:41,604 - Chatbot Log - ERROR - Error fetching chat messages for session 47b981a4-4a89-47ab-8756-a53e56bac7d1 for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:43,335 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:48,990 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,071 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,144 - Chatbot Log - INFO - Fetching chat messages for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,146 - Chatbot Log - WARNING - Chat session not found: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:49,147 - Chatbot Log - ERROR - Error fetching chat messages for session 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:50,710 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:52,744 - Chatbot Log - INFO - Chat session initialized/updated: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,413 - Chatbot Log - INFO - Response generated for chat session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:57,480 - Chatbot Log - INFO - Chat messages saved for session: 39cdcf4d-59b6-4cc9-9d08-1e98d918b3bd
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:58,926 - Chatbot Log - INFO - Clearing all chat sessions for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:53:59,609 - Chatbot Log - INFO - All chat sessions cleared for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:01,185 - Chatbot Log - INFO - Chat session initialized/updated: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,597 - Chatbot Log - INFO - Response generated for chat session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:06,661 - Chatbot Log - INFO - Chat messages saved for session: e3d10549-abed-4fdc-97cc-a302c54e46fb
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,189 - Chatbot Log - INFO - Fetching chat history for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,258 - Chatbot Log - INFO - Chat history fetched successfully for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,339 - Chatbot Log - INFO - Fetching chat messages for session: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,340 - Chatbot Log - WARNING - Chat session not found: 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user: MZl75nA53EeO3ZzSFbNXM8PtV3A2
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:08,343 - Chatbot Log - ERROR - Error fetching chat messages for session 81c0d001-1b78-4ed9-b569-64ffd5e494fa for user MZl75nA53EeO3ZzSFbNXM8PtV3A2: 404: Chat not found
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-15 18:54:09,962 - Chatbot Log - INFO - Initial questions fetched for chat option: General Macroeconomics
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,416 - Chatbot Log - INFO - User created: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:08,939 - Chatbot Log - INFO - User data saved to Firestore: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,720 - Chatbot Log - INFO - User login attempt: saya
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:20,726 - Chatbot Log - INFO - User found: saya@gmail.com
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:16:21,115 - Chatbot Log - INFO - Custom token created for user: evdhnPl9a7dGDGUbFEZBrX2gbmJ2
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:36,463 - Chatbot Log - INFO - Chat session initialized/updated: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,523 - Chatbot Log - INFO - Response generated for chat session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
+2025-05-16 09:17:43,605 - Chatbot Log - INFO - Chat messages saved for session: fcdabd43-87e8-4c52-b356-5ed597df3e12
