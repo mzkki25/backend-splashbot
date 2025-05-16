@@ -1,10 +1,12 @@
 from core.gemini import model
-
 from utils.search_web import search_web_snippets
 
 import pandas as pd
 import numpy as np
 import os
+
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
 
 def initial_questions_gm(file_id_input=None):
     if file_id_input:
@@ -90,7 +92,7 @@ def initial_questions_ngm(chat_option):
             return response
         
         except Exception as e:
-            print(f"Error generating follow-up questions: {e}")
+            logger.error(f"Error generating initial questions for 2 Wheels: {e}")
             return []
     
     elif chat_option == "4 Wheels":

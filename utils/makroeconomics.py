@@ -3,29 +3,14 @@ import re
 import uuid
 import os
 import time
+import ast
+
+from utils.fix_code import clean_code_1, clean_code_2, save_code, read_clean_python_file
 from core.gemini import model
+
 
 from core.logging_logger import setup_logger
 logger = setup_logger(__name__)
-
-def clean_code(code: str) -> str:
-    code = re.sub(r"(?s).*?```python(.*?)```", r"\1", code) if '```python' in code else code
-    code = code.encode('utf-8', errors='ignore').decode('utf-8')  
-    code = re.sub(r'[\u200b\u200e\u200f\ufeff\u00a0\u00ad]', '', code)  
-    code = code.replace('\r\n', '\n').strip()  
-    return code
-
-def clean_code(code: str) -> str:
-    code = re.sub(r"(?s).*?```python(.*?)```", r"\1", code) if '```python' in code else code
-    code = code.encode('utf-8', errors='ignore').decode('utf-8')  
-    code = re.sub(r'[\u200b\u200e\u200f\ufeff\u00a0\u00ad]', '', code)  
-    code = code.replace('\r\n', '\n').strip()  
-    return code
-
-def save_code(code: str, filename: str):
-    with open(filename, 'w') as f:
-        f.write(code)
-    print(f"Code saved to {filename}")
 
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')
@@ -64,14 +49,17 @@ def two_wheels_model(text):
         """
 
         generated_code = model.generate_content(contents=prompt).text
-        generated_code = clean_code(generated_code)
+        generated_code = clean_code_1(generated_code)
+        generated_code = clean_code_2(generated_code)
 
         uid = str(uuid.uuid4())
         
         save_code(generated_code, f"utils/_generated_code_{uid}.py")
         
-        with open(f"utils/_generated_code_{uid}.py", "r") as file:
-            generated_code = file.read()
+        filepath = f"utils/_generated_code_{uid}.py"
+        generated_code = read_clean_python_file(filepath)
+
+        logger.info(f"Generated code: {generated_code}")
 
         local_ns = {'df': df}
         exec(generated_code, {}, local_ns)
@@ -121,6 +109,8 @@ def two_wheels_model(text):
         return f"### Ringkasan Temuan SPLASHBot 🤖:\n{explanation}\n\n---\n{formatted_result}"
 
     except Exception as e:
+        logger.error(f"Error in two_wheels_model: {e}")
+
         fallback_response = model.generate_content(
             contents=f"""
                 Kamu tidak dapat memberikan jawaban spesifik dari:
