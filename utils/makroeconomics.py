@@ -12,6 +12,18 @@ def clean_code(code: str) -> str:
     code = code.replace('\r\n', '\n').strip()  
     return code
 
+def clean_code(code: str) -> str:
+    code = re.sub(r"(?s).*?```python(.*?)```", r"\1", code) if '```python' in code else code
+    code = code.encode('utf-8', errors='ignore').decode('utf-8')  
+    code = re.sub(r'[\u200b\u200e\u200f\ufeff\u00a0\u00ad]', '', code)  
+    code = code.replace('\r\n', '\n').strip()  
+    return code
+
+def save_code(code: str, filename: str):
+    with open(filename, 'w') as f:
+        f.write(code)
+    print(f"Code saved to {filename}")
+
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')
 
@@ -49,17 +61,22 @@ def two_wheels_model(text):
         """
 
         generated_code = model.generate_content(contents=prompt).text
-        response = clean_code(generated_code)
+        generated_code = clean_code(generated_code)
+        
+        save_code(generated_code, "utils/_generated_code.py")
+        
+        with open("utils/_generated_code.py", "r") as file:
+            generated_code = file.read()
 
         local_ns = {'df': df}
-        exec(response, {}, local_ns)
+        exec(generated_code, {}, local_ns)
         answer_the_code = local_ns.get('final_answer').head(10) if 'final_answer' in local_ns else None
 
         prompt_2 = f"""
             ### Konteks:
 
             Model menghasilkan kode sebagai respons:  
-            {response}
+            {generated_code}
 
             Setelah kode dijalankan, diperoleh hasil output aktual sebagai berikut:  
             {answer_the_code}
@@ -109,8 +126,8 @@ def two_wheels_model(text):
             """
         ).text.replace("```python", "").replace("```", "").strip()
 
-        return f"### Maaf, SPLASHBot Belum Dapat Menjawab 😢:\n{fallback_response}"
-    
+        return f"### Maaf, SPLASHBot Belum Dapat Menjawab 😢:\n{fallback_response}"   
+     
 def four_wheels_model(text):
     answer = "Four wheels model masih dalam tahap pengembangan dan belum tersedia untuk digunakan. Silakan coba lagi nanti."
     return answer
