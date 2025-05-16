@@ -29,3 +29,12 @@ def setup_logger(name):
     logger.addHandler(console_file_handler)  
 
     return logger
+
+# import logging
+# logging.basicConfig(level=logging.INFO)
+
+# def setup_logger(name):
+#     logger = logging.getLogger("Chatbot Log")
+#     logger.setLevel(logging.INFO)
+
+#     return logger

@@ -1,5 +1,8 @@
 import pandas as pd
 import re
+import uuid
+import os
+import time
 from core.gemini import model
 
 from core.logging_logger import setup_logger
@@ -62,15 +65,20 @@ def two_wheels_model(text):
 
         generated_code = model.generate_content(contents=prompt).text
         generated_code = clean_code(generated_code)
+
+        uid = str(uuid.uuid4())
         
-        save_code(generated_code, "utils/_generated_code.py")
+        save_code(generated_code, f"utils/_generated_code_{uid}.py")
         
-        with open("utils/_generated_code.py", "r") as file:
+        with open(f"utils/_generated_code_{uid}.py", "r") as file:
             generated_code = file.read()
 
         local_ns = {'df': df}
         exec(generated_code, {}, local_ns)
         answer_the_code = local_ns.get('final_answer').head(10) if 'final_answer' in local_ns else None
+
+        time.sleep(0.03)
+        os.remove(f"utils/_generated_code_{uid}.py")
 
         prompt_2 = f"""
             ### Konteks:
