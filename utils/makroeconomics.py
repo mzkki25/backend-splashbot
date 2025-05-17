@@ -5,7 +5,7 @@ import os
 import time
 import ast
 
-from utils.fix_code import clean_code_1, clean_code_2, save_code, read_clean_python_file
+from utils.preprocessing import clean_code, save_code, read_clean_python_file
 from core.gemini import model
 
 
@@ -49,11 +49,9 @@ def two_wheels_model(text):
         """
 
         generated_code = model.generate_content(contents=prompt).text
-        generated_code = clean_code_1(generated_code)
-        generated_code = clean_code_2(generated_code)
+        generated_code = clean_code(generated_code)
 
         uid = str(uuid.uuid4())
-        
         save_code(generated_code, f"utils/_generated_code_{uid}.py")
         
         filepath = f"utils/_generated_code_{uid}.py"
@@ -63,7 +61,7 @@ def two_wheels_model(text):
 
         local_ns = {'df': df}
         exec(generated_code, {}, local_ns)
-        answer_the_code = local_ns.get('final_answer').head(10) if 'final_answer' in local_ns else None
+        answer_the_code = local_ns.get('final_answer') if 'final_answer' in local_ns else None
 
         time.sleep(0.03)
         os.remove(f"utils/_generated_code_{uid}.py")
@@ -79,6 +77,14 @@ def two_wheels_model(text):
 
             Pengguna mengajukan pertanyaan berikut:  
             **"{text}"**
+
+            ### Konteks Dataset:
+            - Fitur: {df.columns.tolist()}
+            - Target utama: `penjualan` (unit) -> tidak null untuk tahun 2020 sd 2023 dan null untuk tahun 2024 dan 2025 (karena tahun 2024 dan 2025 adalah data yang hanya ada di `prediksi`)
+            - Prediksi: `prediksi` (unit) -> tidak null untuk tahun 2020 sd 2025
+            - Error Value: `error_value` -> nilai error dari model yang dilatih sebelumnya -> tidak null untuk tahun 2020 sd 2023 dan null untuk tahun 2024 dan 2025 (karena tahun 2024 dan 2025 adalah data yang hanya ada di `prediksi`)
+            - Absolute Percentage Error: `APE` -> selisih dari `prediksi` dan `penjualan` (unit) dibagi `penjualan` (unit) -> tidak null untuk tahun 2020 sd 2023 dan null untuk tahun 2024 dan 2025 (karena tahun 2024 dan 2025 adalah data yang hanya ada di `prediksi`)
+            - Kolom numerik: Semua selain `prov`, `kab` (termasuk `cluster` hasil KMeans)
 
             ### Tugas Anda:
             - Lakukan **analisis terhadap hasil aktual tersebut** dengan **fokus pada sisi bisnis** (bukan teknis atau algoritmik).  
@@ -96,13 +102,13 @@ def two_wheels_model(text):
 
         formatted_result = ""
         if isinstance(answer_the_code, pd.DataFrame):
-            formatted_result += answer_the_code.to_markdown(index=False, tablefmt="github")
+            formatted_result += answer_the_code.head(10).to_markdown(index=False, tablefmt="github")
         elif isinstance(answer_the_code, pd.Series):
-            formatted_result += answer_the_code.to_frame().to_markdown(tablefmt="github")
+            formatted_result += answer_the_code.head(10).to_frame().to_markdown(tablefmt="github")
         elif isinstance(answer_the_code, (list)):
-            formatted_result += f"\n{answer_the_code}\n"
+            formatted_result += f"\n{answer_the_code.head(10)}\n"
         elif isinstance(answer_the_code, (dict)):
-            formatted_result += pd.DataFrame(answer_the_code.items(), columns=['Key', 'Value']).to_markdown(index=False, tablefmt="github")
+            formatted_result += pd.DataFrame(answer_the_code.head(10).items(), columns=['Key', 'Value']).to_markdown(index=False, tablefmt="github")
         else:
             formatted_result += str(answer_the_code)
 
@@ -120,7 +126,7 @@ def two_wheels_model(text):
                 Nama Kota yang ada di DataFrame: {df['kab'].unique().tolist()}
                 Nama Provinsi yang ada di DataFrame: {df['prov'].unique().tolist()}
 
-                Namun, kamu bisa memberikan penjelasan umum tentang data tersebut.
+                Namun, kamu bisa memberikan penjelasan/jawaban umum tentang pertanyaan tersebut.
             """
         ).text.replace("```python", "").replace("```", "").strip()
 

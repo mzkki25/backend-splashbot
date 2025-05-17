@@ -1,41 +1,19 @@
 import re
 import ast
 
-def clean_code_1(code: str) -> str:
+def clean_code(code: str) -> str:
     code = re.sub(r"(?s).*?```python(.*?)```", r"\1", code) if '```python' in code else code
-    code = code.encode('utf-8', errors='ignore').decode('utf-8')  
-    code = re.sub(r'[\u200b\u200e\u200f\ufeff\u00a0\u00ad]', '', code)  
-    code = code.replace('\r\n', '\n').strip()  
-    return code
+    code = re.sub(r"(?s).*?python(.*?)```", r"\1", code) if 'python' in code else code
 
-def clean_code_2(code: str) -> str:
-    if 'python' in code:
-        code = re.sub(r"(?s).*?python(.*?)```", r"\1", code)
-    
-    invisible_chars = [
-        '\u200b', # zero width space
-        '\u200c', # zero width non-joiner
-        '\u200d', # zero width joiner
-        '\u200e', # left-to-right mark
-        '\u200f', # right-to-left mark
-        '\ufeff', # zero width no-break space (BOM)
-        '\u00a0', # non-breaking space
-        '\u00ad', # soft hyphen
-        '\u202a', # left-to-right embedding
-        '\u202b', # right-to-left embedding
-        '\u202c', # pop directional formatting
-        '\u202d', # left-to-right override
-        '\u202e', # right-to-left override
-    ]
-    
-    for ch in invisible_chars:
-        code = code.replace(ch, '')
-    
-    code = ''.join(c for c in code if c.isprintable() or c in ['\n', '\t'])
-    
-    code = code.replace('\r\n', '\n').replace('\r', '\n')
-    code = code.strip()
-    
+    invisible_chars = (
+        '\u200b\u200c\u200d\u200e\u200f'  # zero-width & directional
+        '\ufeff\u00a0\u00ad'              # BOM, non-breaking space, soft hyphen
+        '\u202a\u202b\u202c\u202d\u202e'  # LTR/RTL formatting
+    )
+    code = code.translate({ord(ch): None for ch in invisible_chars})
+    code = ''.join(c for c in code if c.isprintable() or c in '\n\t')
+    code = code.replace('\r\n', '\n').replace('\r', '\n').strip()
+
     return code
 
 def clean_python_list(list_str) -> list:

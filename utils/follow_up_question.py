@@ -1,5 +1,5 @@
 from core.gemini import model
-from utils.fix_code import clean_python_list
+from utils.preprocessing import clean_python_list
 
 import numpy as np
 import pandas as pd
