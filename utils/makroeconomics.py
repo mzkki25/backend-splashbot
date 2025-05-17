@@ -64,7 +64,10 @@ def two_wheels_model(text):
         answer_the_code = local_ns.get('final_answer') if 'final_answer' in local_ns else None
 
         time.sleep(0.03)
-        os.remove(f"utils/_generated_code_{uid}.py")
+
+        for file in os.listdir("utils"):
+            if file.startswith("_generated_code_"):
+                os.remove(os.path.join("utils", file))
 
         prompt_2 = f"""
             ### Konteks:
