@@ -120,6 +120,10 @@ def two_wheels_model(text):
     except Exception as e:
         logger.error(f"Error in two_wheels_model: {e}")
 
+        for file in os.listdir("utils"):
+            if file.startswith("_generated_code_"):
+                os.remove(os.path.join("utils", file))
+
         fallback_response = model.generate_content(
             contents=f"""
                 Kamu tidak dapat memberikan jawaban spesifik dari:
