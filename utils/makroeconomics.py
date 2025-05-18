@@ -95,7 +95,7 @@ def two_wheels_model(text):
             - Soroti hal-hal yang **penting dengan cetak tebal (bold)**.
             - Fokus pada **kesimpulan dan dampak bisnis** dari hasil tersebut.
             - Berikan **saran atau rekomendasi** jika relevan.
-
+            
             Jika hasil aktual tidak mengandung informasi bermakna secara bisnis, sampaikan hal itu secara ringkas dan profesional.
         """
         explanation = model.generate_content(contents=prompt_2).text.replace("```python", "").replace("```", "").strip()
