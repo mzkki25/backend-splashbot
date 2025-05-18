@@ -14,6 +14,8 @@ logger = setup_logger(__name__)
 
 def two_wheels_model(text):
     df = pd.read_csv('dataset/fix_2w.csv')
+    uid = str(uuid.uuid4())
+    filepath = f"utils/_generated_code_{uid}.py"
 
     try:
         prompt = f"""
@@ -51,10 +53,8 @@ def two_wheels_model(text):
         generated_code = model.generate_content(contents=prompt).text
         generated_code = clean_code(generated_code)
 
-        uid = str(uuid.uuid4())
         save_code(generated_code, f"utils/_generated_code_{uid}.py")
         
-        filepath = f"utils/_generated_code_{uid}.py"
         generated_code = read_clean_python_file(filepath)
 
         logger.info(f"Generated code: {generated_code}")
@@ -64,10 +64,7 @@ def two_wheels_model(text):
         answer_the_code = local_ns.get('final_answer') if 'final_answer' in local_ns else None
 
         time.sleep(0.03)
-
-        for file in os.listdir("utils"):
-            if file.startswith("_generated_code_"):
-                os.remove(os.path.join("utils", file))
+        os.remove(filepath)
 
         prompt_2 = f"""
             ### Konteks:
@@ -119,10 +116,7 @@ def two_wheels_model(text):
 
     except Exception as e:
         logger.error(f"Error in two_wheels_model: {e}")
-
-        for file in os.listdir("utils"):
-            if file.startswith("_generated_code_"):
-                os.remove(os.path.join("utils", file))
+        os.remove(filepath)
 
         fallback_response = model.generate_content(
             contents=f"""
