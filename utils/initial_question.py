@@ -43,7 +43,7 @@ def initial_questions_gm(file_id_input=None):
 
         response = eval(model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip())
 
-        num_questions = np.random.randint(1, 6)
+        num_questions = np.random.randint(3, 6)
         if len(response) > num_questions:
             response = np.random.choice(response, num_questions, replace=False).tolist()
 
@@ -84,7 +84,7 @@ def initial_questions_ngm(chat_option):
             """.strip()
 
             response = eval(model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip())
-            num_questions = np.random.randint(1, 6)
+            num_questions = np.random.randint(3, 6)
 
             if len(response) > num_questions:
                 response = np.random.choice(response, num_questions, replace=False).tolist()

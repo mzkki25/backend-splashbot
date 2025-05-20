@@ -14,14 +14,14 @@ from utils.follow_up_question import (
 )
 from PIL import Image
 from firebase_admin import firestore
-from datetime import datetime
 
 import io
 import uuid
+import datetime
 
 class Chat:
     def __init__(self):
-        self.now = datetime.now()
+        self.now = datetime.datetime.now(datetime.UTC)
 
     def init_or_update_chat(self, chat_session, user_id, prompt, file_id_input):
         chat_ref = db.collection('chats').document(chat_session)
@@ -205,14 +205,14 @@ class Chat:
                     'role': 'user',
                     'content': prompt,
                     'file_id': file_id_input,
-                    'created_at': self.now
+                    'created_at': datetime.datetime.now(datetime.UTC),
                 },
                 {
                     'message_id': f"assistant-{uuid.uuid4()}",
                     'chat_session_id': chat_session,
                     'role': 'assistant',
                     'content': response,
-                    'created_at': self.now,
+                    'created_at': datetime.datetime.now(datetime.UTC),
                     'references': references,
                 }
             ]),

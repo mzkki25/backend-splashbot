@@ -31,22 +31,10 @@ async def get_chat_messages(chat_session: str, user=Depends(get_current_user)):
 
         messages = chat_data.get('messages', [])
 
-        messages_sorted = sorted(
-            messages, key=lambda x: x.get('created_at', 0) 
-        )
-
-        logger.info(f"Sorting chat messages for session: {chat_session} for user: {user_id}")
-
         results = []
-        for msg in messages_sorted:
+        for msg in messages:
             created_at = msg.get('created_at')
-            if created_at:
-                if isinstance(created_at, (int, float)):
-                    timestamp_str = str(int(created_at))
-                else:
-                    timestamp_str = created_at.isoformat()
-            else:
-                timestamp_str = None
+            timestamp_str = created_at.isoformat()
 
             results.append(
                 ChatMessage(

@@ -13,7 +13,7 @@ def recommend_follow_up_questions_gm(prompt, response, file_id_input=None):
             return []
         else:
             prompt = f"""
-                Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **ekonomi**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter, perdagangan, keuangan, dan indikator ekonomi.
+                Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **perekonomian**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter/publik, perbankan, perdagangan, keuangan, dan indikator sosial ekonomi.
 
                 Diberikan sebuah pertanyaan awal dari pengguna berikut:
 
@@ -35,7 +35,7 @@ def recommend_follow_up_questions_gm(prompt, response, file_id_input=None):
 
             response = eval(model.generate_content(contents=prompt).text.replace("```python", "").replace("```", "").strip())
 
-            num_questions = np.random.randint(1, 6)
+            num_questions = np.random.randint(3, 6)
 
             if len(response) > num_questions:
                 response = np.random.choice(response, num_questions, replace=False).tolist()
@@ -90,7 +90,7 @@ def recommend_follow_up_questions_ngm(prompt, response, chat_option):
             logger.info(f"Response: {response}")
             response = clean_python_list(response)
 
-            num_questions = np.random.randint(1, 6)
+            num_questions = np.random.randint(3, 6)
 
             if len(response) > num_questions:
                 response = np.random.choice(response, num_questions, replace=False).tolist()
