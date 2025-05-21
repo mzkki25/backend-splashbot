@@ -76,6 +76,8 @@ def recommend_follow_up_questions_ngm(prompt, response, chat_option):
                 ### Tugasmu adalah: 
                 - Buatlah hingga 5 pertanyaan lanjutan yang singkat, relevan, profesional, dan bersifat eksploratif untuk membantu pengguna memahami topik ini lebih lanjut
                 - Pertanyaan lanjutan harus **berkaitan dengan data yang tersedia**. 
+                - Pertanyaan lanjutan harus berkorelasi dengan pertanyaan bisnis
+                - Pertanyaan lanjutan sebisa mungkin harus menyinggung kota dan tahun yang ada di dataset
                 - Berikan hasil dalam format list Python (satu pertanyaan per elemen).
 
                 Contoh format:

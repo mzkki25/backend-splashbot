@@ -2,7 +2,10 @@ from fastapi import HTTPException
 
 from core.firebase import db, bucket
 from core.gemini import model, multimodal_model
-from utils.semantic_search import find_relevant_chunks, extract_pdf_text_and_tables_from_blob
+from utils.semantic_search import (
+    find_relevant_chunks_with_faiss, extract_pdf_text_by_page, 
+    is_prompt_about_specific_table, find_pages_containing
+)
 from utils.makroeconomics import (
     two_wheels_model, four_wheels_model, retail_general_model,
     retail_beauty_model, retail_fnb_model, retail_drugstore_model
@@ -83,29 +86,37 @@ class Chat:
         file_content = blob.download_as_bytes()
 
         if 'application/pdf' in content_type:
-            pdf_text = extract_pdf_text_and_tables_from_blob(file_content)
-            relevant_text = find_relevant_chunks(pdf_text, prompt, chunk_size=650, top_k=5) if len(pdf_text) > 1000 else pdf_text
+            pdf_pages = extract_pdf_text_by_page(file_content)
+            table_keyword = is_prompt_about_specific_table(prompt.lower().replace("table", "tabel"))
 
+            if table_keyword:
+                filtered_pages = find_pages_containing(pdf_pages, table_keyword)
+                if filtered_pages:
+                    relevant_text = find_relevant_chunks_with_faiss(filtered_pages, prompt.lower().replace("table", "tabel"), chunk_size=4096, top_k=1)
+                else:
+                    relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower().replace("table", "tabel"), chunk_size=4096, top_k=1)
+            else:
+                relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower(), chunk_size=1024, top_k=5)
+            
             response = model.generate_content(
                 f"""
                     Kamu adalah **SPLASHBot**, AI Agent yang mengkhususkan diri dalam **analisis dokumen ekonomi**, khususnya file **PDF** yang diberikan oleh pengguna.
 
                     ### Informasi yang Disediakan:
-                    - **Konten relevan dari PDF**:  
-                    {relevant_text}
-
                     - **Pertanyaan dari pengguna**:  
                     "{prompt}"
+
+                    - **Konten relevan dari PDF**:  
+                    {relevant_text}
 
                     - **Respons terakhir dari percakapan sebelumnya**:  
                     {last_response}
 
                     ### Aturan Penting:
-                    1. **Hanya jawab pertanyaan** jika isi PDF berkaitan dengan **ekonomi**.  
-                    Jika tidak relevan secara ekonomi, jawab dengan:  
-                    _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
+                    1. **Hanya jawab pertanyaan** jika isi PDF berkaitan dengan **ekonomi**.
                     2. Soroti **kata kunci penting** dalam jawaban dengan **bold** agar mudah dikenali.
                     3. Jawaban harus **jelas**, **fokus pada konteks ekonomi**, dan **berdasarkan isi PDF**.
+                    4. Buatlah kesimpulan dan rekomendasi yang **bernilai insight** dirangkum ke dalam poin-poin.
 
                     ### Tugas:
                     Berikan jawaban berbasis analisis isi PDF tersebut, dengan tetap menjaga fokus pada aspek ekonomi dan pertanyaan pengguna.

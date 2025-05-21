@@ -71,8 +71,10 @@ def initial_questions_ngm(chat_option):
                 Note: **Ini adalah initial question untuk user yang belum tahu untuk bertanya tentang apa**
 
                 ### Tugasmu adalah:
-                - Buatlah hingga 5 pertanyaan lanjutan yang singkat, relevan, profesional, dan bersifat eksploratif untuk membantu pengguna memahami topik ini lebih lanjut, pastikan pertanyaan yang diberikan hanya yang berkaitan dengan dataset yang tersedia
-                - Pertanyaan lanjutan harus **berkaitan dengan data yang tersedia**. 
+                - Buatlah hingga 5 pertanyaan awal yang singkat, relevan, profesional, dan bersifat eksploratif untuk membantu pengguna memahami topik ini lebih lanjut, pastikan pertanyaan yang diberikan hanya yang berkaitan dengan dataset yang tersedia
+                - Pertanyaan awal harus berkorelasi dengan pertanyaan bisnis
+                - Pertanyaan awal sebisa mungkin harus menyinggung kota dan tahun yang ada di dataset
+                - Pertanyaan awal harus **berkaitan dengan data yang tersedia**. 
                 - Berikan hasil dalam format list Python (satu pertanyaan per elemen).
 
                 Contoh format:
