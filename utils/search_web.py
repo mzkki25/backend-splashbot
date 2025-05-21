@@ -35,7 +35,8 @@ def search_web_snippets(user_query, num_results=8):
             snippet_results.append(linked_result["snippet"])
 
         return {
-            "linked_results": linked_results,
+            "list_linked_results": linked_results,
+            "list_snippet_results": snippet_results,
             "snippet_results": "\n".join(snippet_results),
         }
     

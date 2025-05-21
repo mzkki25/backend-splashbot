@@ -157,8 +157,8 @@ class Chat:
 
     def _handle_web_prompt(self, prompt, last_response):
         result = search_web_snippets(prompt, num_results=5)
-        references = result.get("linked_results", [])
-        snippets = result.get("snippet_results", "")
+        references = result.get("list_linked_results", [])
+        snippets = result.get("list_snippet_results", "")
 
         response = model.generate_content(
             f"""
@@ -170,18 +170,18 @@ class Chat:
             ### Pertanyaan dari Pengguna:
             {prompt}
 
-            ### Informasi Terkini dari Internet:
-            {snippets}
-
-            ### Referensi:
-            {references}
+            ### Informasi Terkini dari Internet terurut berdasarkan link referensi:
+            - {snippets}
+            - {references}
 
             ### Catatan Penting:
-            - Gunakan **informasi dari internet** dan semua pengetahuan-mu jika **relevan dengan topik ekonomi**.
-            - **Abaikan** informasi yang tidak berkaitan dengan ekonomi.
-            - **Jangan menyebutkan atau mengutip link** dari internet secara eksplisit dalam jawaban.
-            - Gunakan penekanan (**bold**) pada **kata kunci penting** dalam jawaban agar lebih jelas bagi pengguna.
-            - Sebisa mungkin, jangan menjawab dengan "saya tidak tahu" atau "saya tidak bisa menjawab". Gunakan pengetahuan yang ada untuk memberikan jawaban yang informatif.
+            - Gunakan informasi dari internet dan pengetahuan terkini jika relevan dengan topik ekonomi.
+            - Abaikan informasi yang tidak berkaitan dengan ekonomi.
+            - Sisipkan link referensi secara kontekstual dalam isi jawaban menggunakan format markdown: [teks terkait](URL).
+              Contoh: Inflasi Indonesia pada [April 2025 naik menjadi 3,5% menurut BPS](https://www.bps.go.id).
+            - Gunakan penekanan (bold) pada kata kunci penting agar poin-poin penting mudah dikenali.
+            - Hindari menjawab dengan "saya tidak tahu" atau "saya tidak bisa menjawab".
+            - Gunakan data atau pengetahuan yang tersedia untuk memberikan jawaban yang informatif dan relevan.
 
             ### Tugasmu:
             Berikan jawaban yang **jelas**, **relevan**, dan **berbasis ekonomi** terhadap pertanyaan pengguna. 
