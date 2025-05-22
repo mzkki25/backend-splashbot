@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 
 from core.firebase import db, bucket
-from core.gemini import model, multimodal_model
+from core.gemini import model_2, multimodal_model_2
 from utils.semantic_search import (
     find_relevant_chunks_with_faiss, extract_pdf_text_by_page, 
     is_prompt_about_specific_table, find_pages_containing
@@ -98,7 +98,7 @@ class Chat:
             else:
                 relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower(), chunk_size=1024, top_k=5)
             
-            response = model.generate_content(
+            response = model_2.generate_content(
                 f"""
                     Kamu adalah **SPLASHBot**, AI Agent yang mengkhususkan diri dalam **analisis dokumen ekonomi**, khususnya file **PDF** yang diberikan oleh pengguna.
 
@@ -125,7 +125,7 @@ class Chat:
 
         elif content_type.startswith('image/'):
             image = Image.open(io.BytesIO(file_content)).convert("RGB")
-            response = multimodal_model.generate_content(
+            response = multimodal_model_2.generate_content(
                [
                     "Kamu adalah **SPLASHBot**, AI analis yang **mengkhususkan diri di bidang ekonomi dan bisnis**, serta mampu **menganalisis gambar** yang relevan dengan topik tersebut.",
                     image,
@@ -154,13 +154,25 @@ class Chat:
             raise HTTPException(status_code=400, detail="Unsupported file type")
 
         return file_url, response
+    
+    def _format_snippets(self, search_results):
+        titles = search_results.get("list_title_results", [])
+        links = search_results.get("list_linked_results", [])
+        snippets = search_results.get("list_snippet_results", [])
+
+        formatted = []
+        for title, link, snippet in zip(titles, links, snippets):
+            formatted.append(f"**{title}**\n{snippet}\n[Link]({link})\n")
+            
+        formatted = [f"**{i+1}.** {sentence}" for i, sentence in enumerate(formatted)]
+        return "\n".join(formatted)
 
     def _handle_web_prompt(self, prompt, last_response):
-        result = search_web_snippets(prompt, num_results=5)
-        references = result.get("list_linked_results", [])
-        snippets = result.get("list_snippet_results", "")
+        results = search_web_snippets(prompt, num_results=5)
+        snippets    = self._format_snippets(results)
+        references  = results.get("list_linked_results", [])
 
-        response = model.generate_content(
+        response = model_2.generate_content(
             f"""
             Kamu adalah **SPLASHBot**, sebuah AI Agent yang ahli dalam menjawab pertanyaan seputar **ekonomi**, termasuk ekonomi makro, mikro, kebijakan fiskal/moneter, perdagangan, keuangan, dan indikator ekonomi.
 
@@ -170,24 +182,27 @@ class Chat:
             ### Pertanyaan dari Pengguna:
             {prompt}
 
-            ### Informasi Terkini dari Internet terurut berdasarkan link referensi:
-            - {snippets}
-            - {references}
+            ### Informasi dari Internet:
+            {snippets}
 
             ### Catatan Penting:
             - Gunakan informasi dari internet dan pengetahuan terkini jika relevan dengan topik ekonomi.
             - Abaikan informasi yang tidak berkaitan dengan ekonomi.
-            - Sisipkan link referensi secara kontekstual dalam isi jawaban menggunakan format markdown: [teks terkait](URL).
-              Contoh: Inflasi Indonesia pada [April 2025 naik menjadi 3,5% menurut BPS](https://www.bps.go.id).
-            - Gunakan penekanan (bold) pada kata kunci penting agar poin-poin penting mudah dikenali.
+            - Sisipkan tautan referensi secara **implisit dan alami ke dalam kalimat**, seperti gaya ChatGPT. Contoh:  
+              - _menurut [Bank Indonesia](https://www.bi.go.id)..._,  
+              - _laporan dari [Badan Pusat Statistik](https://www.bps.go.id)..._
+            - Gunakan **penekanan (bold)** pada kata kunci penting agar poin-poin penting mudah dikenali.
             - Hindari menjawab dengan "saya tidak tahu" atau "saya tidak bisa menjawab".
-            - Gunakan data atau pengetahuan yang tersedia untuk memberikan jawaban yang informatif dan relevan.
+            - Gunakan data atau pengetahuan yang tersedia untuk memberikan jawaban yang **informatif**, **jelas**, dan **relevan**.
 
             ### Tugasmu:
             Berikan jawaban yang **jelas**, **relevan**, dan **berbasis ekonomi** terhadap pertanyaan pengguna. 
             Jika pertanyaannya **tidak berkaitan dengan ekonomi**, cukup balas dengan: _"Maaf, saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi."_
             """
         ).text
+
+        if response.__contains__("saya hanya dapat menjawab pertanyaan yang berkaitan dengan ekonomi"):
+            references = None
 
         return response, references
 
