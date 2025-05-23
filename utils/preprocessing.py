@@ -6,9 +6,9 @@ def clean_code(code: str) -> str:
     code = re.sub(r"(?s).*?python(.*?)```", r"\1", code) if 'python' in code else code
 
     invisible_chars = (
-        '\u200b\u200c\u200d\u200e\u200f'  # zero-width & directional
-        '\ufeff\u00a0\u00ad'              # BOM, non-breaking space, soft hyphen
-        '\u202a\u202b\u202c\u202d\u202e'  # LTR/RTL formatting
+        '\u200b\u200c\u200d\u200e\u200f'  
+        '\ufeff\u00a0\u00ad'              
+        '\u202a\u202b\u202c\u202d\u202e'  
     )
     code = code.translate({ord(ch): None for ch in invisible_chars})
     code = ''.join(c for c in code if c.isprintable() or c in '\n\t')
