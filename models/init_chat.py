@@ -22,6 +22,9 @@ import io
 import uuid
 import datetime
 
+from core.logging_logger import setup_logger
+logger = setup_logger(__name__)
+
 class Chat:
     def __init__(self):
         self.now = datetime.datetime.now(datetime.UTC)
@@ -87,15 +90,18 @@ class Chat:
 
         if 'application/pdf' in content_type:
             pdf_pages = extract_pdf_text_by_page(file_content)
-            table_keyword = is_prompt_about_specific_table(prompt.lower().replace("table", "tabel"))
+            table_keyword = is_prompt_about_specific_table(prompt)
 
             if table_keyword:
                 filtered_pages = find_pages_containing(pdf_pages, table_keyword)
                 if filtered_pages:
-                    relevant_text = find_relevant_chunks_with_faiss(filtered_pages, prompt.lower().replace("table", "tabel"), chunk_size=4096, top_k=1)
+                    logger.info(f"Table found in filtered pages.")
+                    relevant_text = find_relevant_chunks_with_faiss(filtered_pages, prompt.lower(), chunk_size=4096, top_k=1)
                 else:
-                    relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower().replace("table", "tabel"), chunk_size=4096, top_k=1)
+                    logger.warning(f"Table not found in filtered pages, using all pages.")
+                    relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower(), chunk_size=4096, top_k=1)
             else:
+                logger.info(f"Table not found in prompt, using all pages.")
                 relevant_text = find_relevant_chunks_with_faiss(pdf_pages, prompt.lower(), chunk_size=1024, top_k=5)
             
             response = model_2.generate_content(
