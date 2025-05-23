@@ -59,10 +59,10 @@ def find_relevant_chunks_with_faiss(texts: list, query: str, chunk_size: int = 5
         chunks.extend([text[i:i+chunk_size] for i in range(0, len(text), chunk_size)])
 
     chunk_embeddings = sentence_model.encode(chunks, normalize_embeddings=True).astype(np.float32)
-    query_embedding = sentence_model.encode([query], normalize_embeddings=True).astype(np.float32)
+    query_embeddings = sentence_model.encode([query], normalize_embeddings=True).astype(np.float32)
 
     logger.info(f"Chunk embeddings shape: {chunk_embeddings.shape}")
-    logger.info(f"Query embedding shape: {query_embedding.shape}")
+    logger.info(f"Query embedding shape: {query_embeddings.shape}")
 
     dim = chunk_embeddings.shape[1]
     index = faiss.IndexFlatIP(dim)  
@@ -70,20 +70,32 @@ def find_relevant_chunks_with_faiss(texts: list, query: str, chunk_size: int = 5
 
     logger.info(f"Index size: {index.ntotal}")
     
-    distances, indices = index.search(query_embedding, top_k)
+    distances, indices = index.search(query_embeddings, top_k)
     relevant_text = "\n\n".join([chunks[i] for i in indices[0]])
     return relevant_text
 
-# def find_relevant_chunks_with_cosim(texts: list, query: str, chunk_size: int = 500, top_k: int = 3) -> str:
-#     chunks = []
-#     for text in texts:
-#         chunks.extend([text[i:i+chunk_size] for i in range(0, len(text), chunk_size)])
+def find_relevant_chunks_with_cosim(texts: list, query: str, chunk_size: int = 500, top_k: int = 3) -> str:
+    chunks = []
+
+    query_lang_detect = langdetect.detect(query)
+    texts_lang_detect = [langdetect.detect(text) for text in texts]
+    texts_lang_detect_common = max(set(texts_lang_detect), key=texts_lang_detect.count)
+
+    logger.info(f"Query language detected: {query_lang_detect}")
+    logger.info(f"Texts language detected: {texts_lang_detect}")
+
+    if query_lang_detect != texts_lang_detect_common:
+        query = translator.translate(query, dest=texts_lang_detect_common).text
+        logger.info(f"Translated query: {query}")
+
+    for text in texts:
+        chunks.extend([text[i:i+chunk_size] for i in range(0, len(text), chunk_size)])
     
-#     chunk_embeddings = sentence_model.encode(chunks)
-#     query_embedding = sentence_model.encode(query)
+    chunk_embeddings = sentence_model.encode(chunks)
+    query_embedding = sentence_model.encode(query)
 
-#     similarities = cosine_similarity([query_embedding], chunk_embeddings)[0]
-#     top_indices = similarities.argsort()[-top_k:][::-1]
+    similarities = cosine_similarity([query_embedding], chunk_embeddings)[0]
+    top_indices = similarities.argsort()[-top_k:][::-1]
 
-#     relevant_text = "\n\n".join([chunks[i] for i in top_indices])
-#     return relevant_text
+    relevant_text = "\n\n".join([chunks[i] for i in top_indices])
+    return relevant_text
